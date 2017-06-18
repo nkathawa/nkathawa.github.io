@@ -1,0 +1,43 @@
+body { 
+	font-family: Garamond, "Times New Roman", serif;
+	background-color: #00274c;
+}
+
+/*img { 
+	float: right;
+}*/
+
+div {
+	border-radius: 25px;
+    background: #ffcb05;
+    padding: 20px; 
+}
+
+div:not(:last-child) {
+	margin-bottom: 40px;
+}
+
+h1 { 
+	font-family: Garamond, "Times New Roman", serif;
+	font-size: 200%;
+}
+
+h2 { 
+	font-family: Garamond, "Times New Roman", serif;
+	font-size: 175%;
+}
+
+h3 { 
+	font-family: Garamond, "Times New Roman", serif;
+	font-size: 150%;
+}
+
+p { 
+	font-family: "Times New Roman", serif;
+	font-size: 100%;
+}
+
+a:link { color: rgb(0, 0, 153) }
+a:visited { color: rgb(153, 0, 153) }
+a:hover { color: rgb(0, 96, 255) }
+a:active { color: rgb(255, 0, 102) }
