@@ -7,19 +7,31 @@ body {
 	float: right;
 }*/
 
-div {
+.title {
+	text-align: center;
+	font-size: 300%;
+	font-family: Garamond, "Times New Roman", serif;
+	margin-bottom: 40px;
+	color: #ffcb05;
+}
+
+.divIndex {
 	border-radius: 25px;
     background: #ffcb05;
     padding: 20px; 
+    margin: 20px;
 }
 
-div:not(:last-child) {
+.divIndex:not(:last-child) {
 	margin-bottom: 40px;
 }
 
 h1 { 
 	font-family: Garamond, "Times New Roman", serif;
 	font-size: 200%;
+	text-align: center;
+	border-bottom: 2px solid;
+	padding-bottom: 10px;
 }
 
 h2 { 
@@ -30,6 +42,8 @@ h2 {
 h3 { 
 	font-family: Garamond, "Times New Roman", serif;
 	font-size: 150%;
+	text-indent: 20px;
+	/*border-left: thick solid #00274c;*/
 }
 
 p { 
