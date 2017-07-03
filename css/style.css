@@ -79,7 +79,7 @@ h3 {
 
 p { 
 	font-family: 'Roboto', sans-serif;
-	font-size: 100%;
+	font-size: 120%;
 }
 
 .myBtn {
@@ -101,7 +101,9 @@ p {
     background-color: #555; /* Add a dark-grey background on hover */
 }
 
-a:link { color: rgb(0, 0, 153) }
-a:visited { color: rgb(153, 0, 153) }
-a:hover { color: rgb(0, 96, 255) }
-a:active { color: rgb(255, 0, 102) }
+
+
+.a1:link { color: rgb(0, 0, 153) }
+.a1:visited { color: rgb(153, 0, 153) }
+.a1:hover { color: rgb(0, 96, 255) }
+.a1:active { color: rgb(255, 0, 102) }
