@@ -1,6 +1,24 @@
 body { 
-	font-family: Garamond, "Times New Roman", serif;
+	font-family: 'Roboto', sans-serif;
 	background-color: #00274c;
+}
+
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.navbar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
 }
 
 /*img { 
@@ -10,14 +28,16 @@ body {
 .title {
 	text-align: center;
 	font-size: 300%;
-	font-family: Garamond, "Times New Roman", serif;
+	font-family: 'Roboto', sans-serif;
 	margin-bottom: 40px;
+	margin-top: 80px;
 	color: #ffcb05;
 }
 
 .divIndex {
 	border-radius: 25px;
-    background: #ffcb05;
+	border: 8px solid #ffcb05;
+    background: #D3D3D3/*#ffcb05*/;
     padding: 20px; 
     margin: 20px;
 }
@@ -26,29 +46,59 @@ body {
 	margin-bottom: 40px;
 }
 
+.divIndexHeaders {
+	border-radius: 25px;
+    background: #ffcb05;
+    padding: 40px;
+    /*margin: 20px;*/
+}
+
 h1 { 
-	font-family: Garamond, "Times New Roman", serif;
+	font-family: 'Roboto', sans-serif;
 	font-size: 200%;
 	text-align: center;
 	border-bottom: 2px solid;
 	padding-bottom: 10px;
 }
 
+.border {
+	border-bottom: 2px solid;
+}
+
 h2 { 
-	font-family: Garamond, "Times New Roman", serif;
+	font-family: 'Roboto', sans-serif;
 	font-size: 175%;
 }
 
 h3 { 
-	font-family: Garamond, "Times New Roman", serif;
+	font-family: 'Roboto', sans-serif;
 	font-size: 150%;
 	text-indent: 20px;
 	/*border-left: thick solid #00274c;*/
 }
 
 p { 
-	font-family: "Times New Roman", serif;
+	font-family: 'Roboto', sans-serif;
 	font-size: 100%;
+}
+
+.myBtn {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed/sticky position */
+    bottom: 20px; /* Place the button at the bottom of the page */
+    right: 30px; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    background-color: red; /* Set a background color */
+    color: white; /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 15px; /* Some padding */
+    border-radius: 10px; /* Rounded corners */
+}
+
+.myBtn:hover {
+    background-color: #555; /* Add a dark-grey background on hover */
 }
 
 a:link { color: rgb(0, 0, 153) }
