@@ -1,23 +1,3 @@
-// Scroll to bottom
-//window.scroll({ top: 2500, left: 0, behavior: 'smooth' });
-
-function scrollFunction() {
-    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-        document.getElementById("myBtn").style.display = "block";
-    } else {
-        document.getElementById("myBtn").style.display = "none";
-    }
-}
-
-// When the user scrolls down 20px from the top of the document, show the button
-window.onscroll = function() {scrollFunction()};
-
-// When the user clicks on the button, scroll to the top of the document
-function topFunction() {
-    document.body.scrollTop = 0; // For Chrome, Safari and Opera 
-    document.documentElement.scrollTop = 0; // For IE and Firefox
-}
-
 // Select all links with hashes
 jQuery(document).ready(function($){
   $('a[href*="#"]')
@@ -39,7 +19,7 @@ jQuery(document).ready(function($){
           		// Only prevent default if animation is actually gonna happen
           		event.preventDefault();
           		$('html, body').animate({
-            			scrollTop: target.offset().top
+            			scrollTop: target.offset().top - 60
           		}, 1000, function() {
             			// Callback after animation
             			// Must change focus!
@@ -54,5 +34,12 @@ jQuery(document).ready(function($){
           		});
         		}
       	}
-    	});
+    });
+});
+
+jQuery(document).ready(function($){
+  $("a[href='#']").click(function() {
+    $("html, body").animate({ scrollTop: 0 }, "slow");
+    return false;
+  });
 });
