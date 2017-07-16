@@ -25,7 +25,7 @@ jQuery(document).ready(function($)
                 $('html, body').animate(
                 {
                         scrollTop: target.offset().top - 60
-                }, 1000, function() 
+                }, 500, function() 
                 {
                     // Callback after animation
                     // Must change focus!

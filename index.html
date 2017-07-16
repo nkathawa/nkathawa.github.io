@@ -18,27 +18,25 @@
     <body>
         <div class="navbar">
             <a href="#">Navin Kathawa</a>
-            <a href="#about">Me in a Nutshell</a>
-            <a href="#profiles">External Profiles</a>
-            <a href="#resume">Resume</a>
+            <a href="#about">About Me</a>
             <div class="dropdown">
-                <button class="dropbtn">Interest Pages &#9660;</button>
+                <button class="dropbtn">Resume &#9660;</button>
                 <div class="dropdown-content">
-                    <a href="html/nhl.html">NHL Hockey</a>
-                    <a href="html/roller.html">U of M Club Roller Hockey</a>
-                    <a href="html/programming.html">Programming</a>
-                    <a href="html/weightlifting.html">Weightlifting</a>
-                    <a href="catholicism/nhl.html">Catholicism</a>
-                    <a href="html/hiphop.html">Rap and Hip Hop</a>
+                    <a href="#experience">Experience</a>
+                    <a href="#education">Education</a>
+                    <a href="#activities">Extracurricular Activities</a>
+                    <a href="#skills">Skills and Languages</a>
                 </div>
             </div> 
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact Me</a>
         </div>
         <div>
             <p class="title">navinkathawa.com</p>
         </div>
         <div id="about"></div><div></div>
         <div class="divIndex">
-            <h1>Me in a Nutshell</h1>
+            <h1>About Me</h1>
             <p>
                 My name is Navin Kathawa, and I am a senior studying computer science at the University of Michigan. I decided to major in computer science during my freshman year of college, when I took the mandatory programming course for engineers, and found that it was something that I very much enjoyed. 
             </p>
@@ -49,56 +47,164 @@
                 On a more personal level, I am an avid lover of both watching and playing hockey. I am a diehard fan of both the Detroit Red Wings and Washington Capitals, but I am a lover of the sport, so I'll watch no matter who is playing. I also enjoy hanging out with friends, reading, lifting weights, listening to rap and hip hop, and eating good food.
             </p>
         </div>
-        <div id="profiles"></div><div></div>
-        <div class="divIndex">
-            <h1>My External Profiles</h1>
-            <p>
-                Check out my Linkedin profile and my Github profile to see my work and school experience and my programming projects.
-            </p>
-            <p>
-                <a class="a1" href="https://www.linkedin.com/in/navinkathawa" target="_blank">My Linkedin Profile</a>
-            </p>
-            <p>
-                <a href="https://github.com/nkathawa" target="_blank">My Github Profile</a>
-            </p>
-        </div>
         <div id="resume"></div><div></div>
         <div class="divIndex">
             <h1>My Resume</h1>
-                <h2>Education</h2>
-                    <h3>The University of Michigan, Ann Arbor</h3>
-                        <p>Major: Computer Science</p>
-                        <p>Expected Graduation Date: April 2018</p>
-                        <p>Favorite Classes: Computer Security, Web Databases, Java Programming, Data Structures and Algorithms</p>
+                <div id="experience"></div><div></div>
                 <h2>Work Experience</h2>
-                    <h3>Servant Systems, Inc. in Chelsea, MI: Software Engineering Intern</h3>
-                    <h3>Human Biomechanics and Control Laboratory in Ann Arbor, MI: Research Assistant</i></h3>
-                    <h3>Walmart Supercenter in Clinton Township, MI: Courtesy Associate</i></h3>
+
+                <div class="divIndexInside">
+                <div class="content">
+                    <img src="static/billhighway.jpg"/ alt="" >
+                    <div>
+                        <h3>Billhighway, Inc.</h3>
+                        <h3>Software Engineering Intern</h3>
+                        <p><i>Billhighway develops software for nonprofits to help them manage their financial situations so they can more easily achieve their goals</i></p>
+                    </div>
+                </div>
+                <ul type="disc">
+                    <p>Achievements/Tasks:</p>
+                    <li>Developed software which directly benefited current and potential clients by providing them with data in an easy to read format</li>
+                    <li>Tested my code as well as other code, using a variety of tools, including Postman</li>
+                    <li>Was actively involved in the design process for any Billhighway software changes</li>
+                </ul>
+                </div>
+                <h1 class="h1"></h1>
+                                
+                <div class="divIndexInside">
+                <div class="content">
+                    <img src="static/servant.jpg"/ alt="" >
+                    <div>
+                        <h3>Servant Systems, Inc. in Chelsea, MI</h3>
+                        <h3>Software Engineering Intern</h3>
+                        <p><i>Servant Systems provides software and services to aid a select group of clients' information technology needs</i></p>
+                    </div>
+                </div>
+                <ul type="disc">
+                    <p>Achievements/Tasks:</p>
+                    <li>Wrote an automated test case suite for a .NET web application, using the Jasmine and Selenium framework</li>
+                    <li>Investigated new testing methods to aid in the testing effort</li>
+                    <li>Kept up with code changes, documented bugs, and communicated errors to developers</li>
+                </ul>
+                </div>
+                <h1 class="h1"></h1>
+
+
+                <div class="divIndexInside">
+                <div class="content">
+                    <img src="static/work_michigan.jpg"/ alt="" >
+                    <div>
+                        <h3>Human Biomechanics and Control Laboratory in Ann Arbor, MI</h3>
+                        <h3>Research Assistant</h3>
+                        <p><i>A biomechanics laboratory at the University of Michigan specializing in developing advanced prosthetic controllers to aid amputees</i></p>
+                    </div>
+                </div>
+                <ul type="disc">
+                    <p>Achievements/Tasks:</p>
+                    <li>Performed experiments, collected and analyzed data</li>
+                    <li>Sharpened programming skills through MATLAB data analysis</li>
+                    <li>Learned proper experimental setup and documentation</li>
+                </ul>
+                </div>
+                <h1 class="h1"></h1>
+
+
+
+
+                <div id="education"></div><div></div>
+                <h2>Education</h2>
+
+                <div class="divIndexInside">
+                <div class="content">
+                    <img src="static/michigan.jpg"/ alt="" >
+                    <div>
+                        <h3>The University of Michigan, Ann Arbor</h3>
+                        <p>Computer Science B.S.E.</p>
+                        <p>Expected Graduation Date: April 2018</p>
+                        <ul type="disc">
+                            <p>Relevant Coursework:</p>
+                            <li>Machine Learning</li>
+                            <li>Web Development</li>
+                            <li>Computer Security</li>
+                            <li>Java Programming</li>
+                            <li>Computer Organization</li>
+                            <li>Data Structures and Algorithms</li>
+                        </ul>
+                    </div>
+                </div>
+                </div>
+                <h1 class="h1"></h1>
+
+                <div id="activities"></div><div></div>
+
+
                 <h2>Extracurricular Activities</h2>
-                    <h3>Code-M: Board Member</i></h3>
-                    <h3>Michigan Research Community: Peer Mentor</i></h3>
-                    <h3>Study Group Leader</i></h3>
-                <h2>Awards and Honors</h2>
-                    <h3>College of Engineering Dean's List</h3>
-                    <h3>University of Michigan Honors</h3>
-                    <h3>Regents Merit Scholarship</h3>
+                
+                <div class="divIndexInside">
+                <div class="content">
+                    <img class="img-padding-top" src="static/codem.png"/ alt="" >
+                    <div>
+                        <h3>Code-M, Executive Board Member</h3>
+                    </div>
+                </div>
+                <ul type="disc">
+                    <p>Responsibilities:</p>
+                    <li>Organize and lead workshops in a variety of languages and topics, including Python, web development, user interfaces, and bots</li>
+                    <li>Manage club activities, and grow the club through quality workshops and events</li>
+                </ul>
+                </div>
+                <h1 class="h1"></h1>
+
+
+                <div class="divIndexInside">
+                <div class="content">
+                    <img class="img-padding-top" src="static/work_michigan.jpg"/ alt="" >
+                    <div>
+                        <h3>Michigan Research Community</h3>
+                        <h3>Peer Mentor</h3>
+                    </div>
+                    <ul type="disc">
+                    <p>Responsibilities:</p>
+                    <li>Assisted freshmen with transition to college, gave advice on classes and research projects</li>
+                    <li>Honed leadership and mentorship skills</li>
+                </ul>
+                </div>
+                </div>
+                <h1 class="h1"></h1>
+
+
+                <div class="divIndexInside">
+                <div class="content">
+                    <img class="img-padding-top" src="static/work_michigan.jpg"/ alt="" >
+                    <div>
+                        <h3>Michigan Research Community</h3>
+                        <h3>Study Group Leader</h3>
+                    </div>
+                    <ul type="disc">
+                    <p>Responsibilities:</p>
+                    <li>Facilitated discussion and provided explanations for concepts</li>
+                    <li>Aided students with a variety of subjects from computer programming to chemistry</li>
+                </ul>    
+                </div>            
+                </div>
+                <h1 class="h1"></h1>
+
+
+
+                <div id="skills"></div><div></div>
                 <h2>Skills</h2>
                     <h3>Programming</h3>
-                    <img src="static/typing.gif-c200">
+                    <img src="static/596a9548c8312626415987.gif">
                     <h3>Software Testing</h3>
-                    <img src="static/smash_computer.gif">
+                    <img src="static/596a9559da117441080783.gif">
                     <h3>Research Skills</h3>
                     <h3>Spanish</h3>
         </div>
         <div id="pages"></div><div></div>
         <div class="footer-social-icons">
             <ul class="social-icons">
-                <li><a href="" class="social-icon"> <i class="fa fa-facebook"></i></a></li>
-                <li><a href="" class="social-icon"> <i class="fa fa-twitter"></i></a></li>
-                <li><a href="" class="social-icon"> <i class="fa fa-rss"></i></a></li>
-                <li><a href="" class="social-icon"> <i class="fa fa-youtube"></i></a></li>
-                <li><a href="" class="social-icon"> <i class="fa fa-linkedin"></i></a></li>
-                <li><a href="" class="social-icon"> <i class="fa fa-google-plus"></i></a></li>
+                <li><a href="https://www.linkedin.com/in/navinkathawa" target="_blank" class="social-icon"> <i class="fa fa-linkedin"></i></a></li>
+                <li><a href="https://github.com/nkathawa" target="_blank" class="social-icon"> <i class="fa fa-github"></i></a></li>
             </ul>
         </div>
     </body>
