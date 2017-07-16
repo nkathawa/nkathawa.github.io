@@ -75,7 +75,7 @@ p {
     border: 8px solid #ffcb05;
     background: #FFFFFF/*#D3D3D3*//*#ffcb05*/;
     padding: 20px; 
-    margin: 20px;
+    margin: 40px;
 }
 
 .divIndex:not(:last-child) {
