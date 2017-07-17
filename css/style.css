@@ -76,6 +76,7 @@ p {
     background: #FFFFFF/*#D3D3D3*//*#ffcb05*/;
     padding: 20px; 
     margin: 40px;
+    display: table;
 }
 
 .divIndex:not(:last-child) {
@@ -205,6 +206,19 @@ ul.social-icons {
 .content img {
     margin-right: 35px;
     float: left;
+}
+
+.left {
+    float: left;
+    /*display: table-cell;
+    vertical-align: middle;*/
+}
+
+.right {
+    vertical-align: middle;
+    float: right;
+    /*display: table-cell;
+    vertical-align: middle;*/
 }
 
 ul  {
