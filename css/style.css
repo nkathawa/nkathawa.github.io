@@ -1,6 +1,6 @@
 h1 { 
     font-family: 'Roboto', sans-serif;
-    font-size: 200%;
+    font-size: /*200%;*/ 20px;
     text-align: center;
     border-bottom: 5px solid #00274c;
     padding-bottom: 5%;
@@ -8,7 +8,7 @@ h1 {
 
 .h1 {
     font-family: 'Roboto', sans-serif;
-    font-size: 200%;
+    font-size: /*200%;*/ 20px;
     text-align: center;
     border-bottom: 5px solid;
     padding-bottom: 5%;   
@@ -207,6 +207,7 @@ ul.social-icons {
 .content img {
     margin-right: 10%;
     float: left;
+    size: 20%;
 }
 
 .left {
@@ -227,4 +228,9 @@ ul  {
 }
 ul li  {
     list-style-position:inside
+}
+
+img {
+    display: block;
+    margin: 0 auto;
 }
