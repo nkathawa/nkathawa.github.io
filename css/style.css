@@ -1,9 +1,9 @@
 h1 { 
     font-family: 'Roboto', sans-serif;
     font-size: 200%;
-    text-align: center;
+    text-align: left;
     border-bottom: 5px solid #00274c;
-    padding-bottom: 5%;
+    padding-bottom: 2%;
 }
 
 .h1 {
@@ -93,7 +93,7 @@ p {
     background: #FFFFFF/*#D3D3D3*//*#ffcb05*/;
     padding-left: 2%;
     padding-right: 2%;
-    padding-top: 4%;
+    padding-top: 1%;
     padding-bottom: 4%; 
     margin: 5%;
     width: 85%;
@@ -274,4 +274,13 @@ img {
     display: block;
     margin: 0 auto;
     width: 35%;
+}
+
+
+
+.alignleft {
+    float: left;
+}
+.alignright {
+    float: right;
 }
