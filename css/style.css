@@ -170,8 +170,11 @@ body {
     background-color: #041E42;
 }
 
+
+
+
 .footer-social-icons {
-    width: 50%;
+    /*width: 100%;*/
     display:block;
     margin: 0 auto;
 }
@@ -179,14 +182,16 @@ body {
     color: #fff;
 }
 ul.social-icons {
-    margin-top: 10%;
+    margin-top: 3%;
     text-align: center;
 }
 .social-icons li {
-    margin-right: 5%;
+    margin-right: 2.5%;
+    margin-left: 2.5%;
     vertical-align: top;
     display: inline;
     height: 20%;
+    width: 50%;
 }
 .social-icons a {
     color: #fff;
@@ -195,8 +200,8 @@ ul.social-icons {
 }
 .fa-linkedin {
     height: 5%;
-    width: 5%;
-    padding: 5% 5%;
+    /*width: 2%;*/
+    padding: 1% 1%;
     -o-transition:.5s;
     -ms-transition:.5s;
     -moz-transition:.5s;
@@ -209,8 +214,8 @@ ul.social-icons {
 }
 .fa-github {
     height: 5%;
-    width: 5%;
-    padding:5% 5%;
+    /*width: 1%;*/
+    padding:1% 1%;
     -o-transition:.5s;
     -ms-transition:.5s;
     -moz-transition:.5s;
@@ -221,6 +226,11 @@ ul.social-icons {
 .fa-github:hover {
     background-color: #32CD32;
 }
+
+
+
+
+
 
 .content {
     width: 90%;
