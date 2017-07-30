@@ -88,8 +88,8 @@ p {
 }
 
 .divIndex {
-    border-radius: 25px;
-    border: 8px solid #FFC72C;
+    border-radius: /*25px*/5em;
+    border: /*8px*/0.25em solid #FFC72C;
     background: #FFFFFF/*#D3D3D3*//*#ffcb05*/;
     padding-left: 2%;
     padding-right: 2%;
@@ -357,4 +357,8 @@ img {
     /*margin: 0 auto;*/
     display: inline-block;
     /*display: table;*/
+}
+
+.skills_div {
+    text-align: center;
 }
