@@ -1,3 +1,9 @@
+@media only screen and (max-width: 500px) {
+    body {
+        background-color: lightblue;
+    }
+}
+
 h1 { 
     font-family: 'Roboto', sans-serif;
     font-size: 200%;
@@ -40,7 +46,7 @@ p {
     position: fixed;
     top: 0;
     width: 100%;
-    z-index: 1;
+    z-index: 2;
 }
 
 .navbar a {
@@ -322,7 +328,7 @@ input, select, textarea {
     border-radius: 6px;
     padding: 5px 0;
     position: absolute;
-    /*z-index: 1;*/
+    z-index: 1;
     /*top: -5px;
     left: 110%;*/
     top: 150%;
