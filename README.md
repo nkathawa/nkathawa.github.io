@@ -1,17 +1,15 @@
-This is my repository for my personal website, created using HTML, CSS, Javascript!
+This is my repository for my personal website, created using HTML, CSS, and Javascript!
 
----------------------------------------TO DO------------------------------------------
+TO DO:
 
-Update the style of the site to make it a cleaner look overall
+Make skills clickable rather than hoverable
 
-Create a mobile version and desktop version
+Create a projects section
 
 Create a contact me section
 
-Create a download my resume section
+Create a download my resume link
 
-Headers that lead to different sections (at the top of the page)
+Make navbar mobile responsive
 
-Drop downs for some of the sections with more info
-
-Do the rest of the pages (maybe put them in the header at the top)
+Make the "nk" logo at top mobile responsive
