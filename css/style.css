@@ -58,6 +58,19 @@ p {
     color: #f2f2f2;
 }
 
+@media only screen and (max-width: 1024px) {
+    .navbar a {
+        float: right;
+        display: inline;
+        color: grey;
+        /*color: #D3D3D3;*/
+        text-align: center;
+        padding: 1% 2%;
+        text-decoration: none;
+        font-size: 100%;
+    }
+}
+
 .title {
     text-align: center;
     font-size: 300%;
@@ -184,12 +197,6 @@ body {
     font-family: 'Roboto', sans-serif;
     background-color: #041E42;
 }
-
-/*@media only screen and (max-width: 1000px) {
-    body {
-        background-color: lightblue;
-    }
-}*/
 
 
 
