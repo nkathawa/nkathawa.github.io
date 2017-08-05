@@ -400,6 +400,10 @@ input, select, textarea {
     text-align: center;
 }
 
+.projects_div {
+    text-align: center;
+}
+
 
 
 
@@ -436,7 +440,7 @@ input[type=submit]:hover {
 
 
 
-.divIndexSkills1 {
+.divIndexProjects {
     border-radius: 25px/*5em*/;
     border: /*8px*/0.25em solid #FFC72C;
     background: #FFFFFF/*#D3D3D3*//*#ffcb05*/;
@@ -448,7 +452,18 @@ input[type=submit]:hover {
     width: 40%;
     /*height: 70%;*/
     margin: 0 auto;
+    position: relative;
     display: inline-block;
     /*display: table;*/
     /*float: left;*/
+}
+
+.buttons {
+    padding-top: 3%;
+    margin-right: 1%;
+    margin-left: 1%;
+}
+
+.left-button {
+    margin-right: 2%;
 }
