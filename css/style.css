@@ -417,6 +417,8 @@ input, select, textarea {
 
 .projects_div {
     text-align: center;
+    padding-bottom: 4%; 
+    margin: 5%;
 }
 
 
