@@ -428,6 +428,8 @@ input, select, textarea {
     padding-top: 1%;
     padding-bottom: 1%;
     white-space: nowrap;
+    word-wrap: normal;
+    margin: auto;
 }
 
 .skill_container {
@@ -441,8 +443,8 @@ input, select, textarea {
     margin-right: 0.5%;
     margin-bottom: 0.5%;
     padding: 2%
-    min-width: 2%;
-    /*width: 85%;*/
+    min-width: 1%;
+    width: 15%;
     /*height: 70%;*/
     /*margin: 0 auto;*/
     display: inline-block;
