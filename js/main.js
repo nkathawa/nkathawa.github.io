@@ -2,7 +2,6 @@ $(document).ready(function() {
     $(".dropdown-toggle").dropdown();
 });
 
-
 function onSubmitForm() {
 	if (document.form.math.value == 23) {
 		return true;
