@@ -1,4 +1,7 @@
 // Select all links with hashes
+let workSlideIndex=1;
+let edSlideIndex=1;
+
 jQuery(document).ready(function($)
 {
     $('a[href*="#"]')
@@ -53,3 +56,51 @@ jQuery(document).ready(function($){
         return false;
     });
 });
+
+// Next/previous controls
+function plusSlides(n, className) {
+  if(className == 'educationSlides') {
+    showSlides(edSlideIndex += n, 'educationSlides'); 
+  } else {
+    showSlides(workSlideIndex += n, 'workSlides'); 
+  }
+}
+
+// Thumbnail image controls
+function currentSlide(n, className) {
+  if(className == 'educationSlides') {
+    showSlides(edSlideIndex = n, 'educationSlides'); 
+  } else {
+    showSlides(workSlideIndex = n, 'workSlides'); 
+  }
+}
+
+function showSlides(n, className) {
+  let i;
+  let slides = document.getElementsByClassName(className);
+  let dots = document.getElementsByClassName("dot");
+
+  if(className == 'educationSlides') {
+      if (n > slides.length) {edSlideIndex = 1}
+      if (n < 1) {edSlideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[edSlideIndex-1].style.display = "block";
+      dots[edSlideIndex-1].className += " active";
+  } else {
+    if (n > slides.length) {workSlideIndex = 1}
+      if (n < 1) {workSlideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[workSlideIndex-1].style.display = "block";
+      dots[workSlideIndex-1].className += " active";
+  }
+}
