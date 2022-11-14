@@ -79,6 +79,7 @@ function showSlides(n, className) {
   let i;
   let slides = document.getElementsByClassName(className);
   let dots = document.getElementsByClassName("dot");
+  let dots1 = document.getElementsByClassName("dot1");
 
   if(className == 'educationSlides') {
       if (n > slides.length) {edSlideIndex = 1}
@@ -86,11 +87,11 @@ function showSlides(n, className) {
       for (i = 0; i < slides.length; i++) {
         slides[i].style.display = "none";
       }
-      for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
+      for (i = 0; i < dots1.length; i++) {
+        dots1[i].className = dots1[i].className.replace(" active", "");
       }
       slides[edSlideIndex-1].style.display = "block";
-      dots[edSlideIndex-1].className += " active";
+      dots1[edSlideIndex-1].className += " active";
   } else {
     if (n > slides.length) {workSlideIndex = 1}
       if (n < 1) {workSlideIndex = slides.length}
