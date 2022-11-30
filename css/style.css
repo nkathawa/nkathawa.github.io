@@ -14,29 +14,6 @@ h1 {
     padding-bottom: 2%;
 }
 
-.h1 {
-    font-family: 'Roboto', sans-serif;
-    font-size: /*200%;*/ 20px;
-    text-align: center;
-    border-bottom: 5px solid;
-    padding-bottom: 1%;   
-}
-
-h2 { 
-    font-family: 'Roboto', sans-serif;
-    font-size: 175%;
-}
-
-h3 { 
-    font-family: 'Roboto', sans-serif;
-    font-size: 150%;
-}
-
-p { 
-    font-family: 'Roboto', sans-serif;
-    font-size: 100%;
-}
-
 .navbar {
     background-color: #000000;
     position: fixed;
@@ -77,20 +54,6 @@ p {
     color: #FFC72C;
 }
 
-.divIndexInside {
-    background: #FFFFFF/*#D3D3D3*//*#ffcb05*/;
-    padding: 2%; 
-    margin: 2%;
-    word-wrap: break-word;
-}
-
-.divIndex1 {
-    padding-top: 5%;
-    width: 60%;
-    margin: 0 auto;
-    display: block;
-}
-
 .divIndex {
     border-radius: 25px/*5em*/;
     border: /*8px*/0.25em solid #FFC72C;
@@ -107,12 +70,6 @@ p {
 
 .divIndex:not(:last-child) {
     margin-bottom: 4%;
-}
-
-.divIndexHeaders {
-    border-radius: 1%;
-    background: #FFC72C;
-    padding: 10%;
 }
 
 .dropdown {
@@ -162,11 +119,6 @@ p {
     display: block;
 }
 
-.a1:link { color: rgb(0, 0, 153) }
-.a1:visited { color: rgb(153, 0, 153) }
-.a1:hover { color: rgb(0, 96, 255) }
-.a1:active { color: rgb(255, 0, 102) }
-
 body { 
 	margin: 0px;
     font-family: 'Roboto', sans-serif;
@@ -197,6 +149,7 @@ ul.social-icons {
     text-decoration: none;
     font-size: 300%;
 }
+
 .fa-linkedin {
     height: 5%;
     padding: 1% 1%;
@@ -223,7 +176,6 @@ ul.social-icons {
 .fa-github:hover {
     background-color: #32CD32;
 }
-
 .fa-envelope {
     height: 5%;
     padding:1% 1%;
@@ -236,26 +188,6 @@ ul.social-icons {
 }
 .fa-envelope:hover {
     background-color: #e50000;
-}
-
-.content {
-    width: 90%;
-    overflow: auto;
-}
-
-.content img {
-    margin-right: 10%;
-    float: left;
-    size: 20%;
-}
-
-.left {
-    float: left;
-}
-
-.right {
-    vertical-align: middle;
-    float: right;
 }
 
 ul  {
@@ -294,18 +226,10 @@ input, select, textarea {
     text-align: left;
 }
 
-.alignleft {
-    float: left;
-}
-.alignright {
-    float: right;
-}
-
 .tooltip {
     position: relative;
     display: inline-block;
 }
-
 .tooltip .tooltiptext {
     visibility: hidden;
     width: 160px;
@@ -321,7 +245,6 @@ input, select, textarea {
     margin-left: -80px;
     word-wrap: break-word;
 }
-
 .tooltip .tooltiptext::after {
     content: "";
     position: absolute;

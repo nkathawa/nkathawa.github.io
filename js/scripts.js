@@ -1,4 +1,3 @@
-// Select all links with hashes
 let workSlideIndex=1;
 let edSlideIndex=1;
 
