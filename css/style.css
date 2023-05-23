@@ -74,14 +74,14 @@ h1 {
 
 .introText {
     width: 100%;
-    font-size: 14px; /* Default font size */
+    font-size: 14px;
 }
 
-.divIndex img {
+.introImg {
     height: 100%;
     width: 75%;
-    max-width: 400px; /* Set a maximum width for the image */
-    margin-right: 20px; /* Add some space between the image and text */
+    max-width: 400px;
+    margin-right: 20px;
 }
 
 .dropdown {
