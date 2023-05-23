@@ -104,3 +104,22 @@ function showSlides(n, className) {
       dots[workSlideIndex-1].className += " active";
   }
 }
+
+function downloadPDF() {
+  // Path to the PDF file
+  var pdfPath = "static/Navin_Kathawa_Resume.pdf";
+
+  // Creating a temporary link element
+  var link = document.createElement("a");
+  link.href = pdfPath;
+  link.download = "Navin_Kathawa_Resume.pdf";
+
+  // Appending the link to the document body
+  document.body.appendChild(link);
+
+  // Simulating a click on the link
+  link.click();
+
+  // Removing the link from the document body
+  document.body.removeChild(link);
+}

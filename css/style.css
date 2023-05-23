@@ -72,6 +72,18 @@ h1 {
     margin-bottom: 4%;
 }
 
+.introText {
+    width: 100%;
+    font-size: 14px; /* Default font size */
+}
+
+.divIndex img {
+    height: 100%;
+    width: 75%;
+    max-width: 400px; /* Set a maximum width for the image */
+    margin-right: 20px; /* Add some space between the image and text */
+}
+
 .dropdown {
     float: left;
     overflow: hidden;
@@ -258,32 +270,37 @@ input, select, textarea {
 .tooltip:hover .tooltiptext {
     visibility: visible;
 }
-
 .skill_text {
-    font-size: 120%;
-    padding-left: 4%;
-    padding-right: 4%;
-    padding-top: 1%;
-    padding-bottom: 1%;
+    font-size: 100%;
+    padding: 1% 4%;
     white-space: nowrap;
-    word-wrap: normal;
-    margin: auto;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .skill_container {
-    border-radius: 25px;
-    border: 0.5px solid;
-    background: #add8e6 /*#D3D3D3*//*#ffcb05*/;
-    margin-right: 0.5%;
-    margin-bottom: 0.5%;
-    padding: 2%
-    min-width: 1%;
-    width: 15%;
-    display: inline-block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    height: 100px;
+    margin: 10px;
+    background-color: #f1f1f1;
+    border-radius: 5px;
+    position: relative;
 }
 
 .skills_div {
-    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+@media (max-width: 600px) {
+    .skill_text {
+        font-size: 80%;
+    }
 }
 
 .projects_div {

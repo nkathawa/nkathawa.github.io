@@ -26,6 +26,7 @@
             <div class="dropdown">
                 <button class="dropbtn"><a href="#resume">Resume &#9660;</a></button>
                 <div class="dropdown-content">
+                    <a href="#download">Download</a>
                     <a href="#experience">Experience</a>
                     <a href="#education">Education</a>
                     <a href="#skills">My Skills and Languages</a>
@@ -46,7 +47,7 @@
             <div style="float:left;">
                 <img src="static/navin_headshot.jpg"/ alt="" style="height:100%;width:75%;">
             </div>
-            <div style="float:right;height:100%;width:75%;">
+            <div class="introText" style="float:right;height:100%;width:75%;">
                 <p>My name is Navin Kathawa, and I'm a software engineer. I currently work at Coupa Software. 
                 I was previously with Nutshell doing backend development in PHP. Before that, I was employed at 
                 Domino's in the role of Site Reliability & Dev Ops Engineer, where I was responsible for Kubernetes 
@@ -230,74 +231,46 @@
             <p>I have been able to hone a variety of technical skills throughout my career as a software engineer so far. Below is a list of my skills; hover over one for more information.  
             <div class="skills_div">
                 <div class="skill_container">
-                    <div class="tooltip">
-                        <div class="skill_text">Programming</div><span class="tooltiptext">Courses, internships, and personal projects have helped me sharpen my programming skills in a variety of languages and platforms</span>
-                    </div>
+                    <div class="skill_text">Programming</div>
                 </div>
                 <div class="skill_container">
-                    <div class="tooltip">
-                        <div class="skill_text">C++</div><span class="tooltiptext">3 years of college courses</span>
-                    </div>
+                    <div class="skill_text">C++</div>
                 </div>
                 <div class="skill_container">
-                    <div class="tooltip">
-                        <div class="skill_text">Python</div><span class="tooltiptext">Self-taught in order to create a UI calculator in Python; 1 course in it</span>
-                    </div>
+                    <div class="skill_text">Python</div>
                 </div>
                 <div class="skill_container">
-                    <div class="tooltip">
-                        <div class="skill_text">Java</div><span class="tooltiptext">1 year of college courses</span>
-                    </div>
+                    <div class="skill_text">Java</div>
                 </div>
                 <div class="skill_container">
-                    <div class="tooltip">
-                        <div class="skill_text">PHP</div><span class="tooltiptext">1 year of college courses</span>
-                    </div>
+                    <div class="skill_text">PHP</div>
                 </div>
                 <div class="skill_container">
-                    <div class="tooltip">
-                        <div class="skill_text">Linux</div><span class="tooltiptext">Use in several courses, experienced with Linux terminal</span>
-                    </div>
+                    <div class="skill_text">Linux</div>
                 </div>
                 <div class="skill_container">
-                    <div class="tooltip">
-                        <div class="skill_text">Windows</div><span class="tooltiptext">Use often for personal software development and general coursework</span>
-                    </div>
+                    <div class="skill_text">Windows</div>
                 </div>
                 <div class="skill_container">
-                    <div class="tooltip">
-                        <div class="skill_text">Visual Studio</div><span class="tooltiptext">Use in courses, internships, and personal projects</span>
-                    </div>
+                    <div class="skill_text">Visual Studio</div>
                 </div>
                 <div class="skill_container">
-                    <div class="tooltip">
-                        <div class="skill_text">Github</div><span class="tooltiptext">Use for version control in courses and personal projects</span>
-                    </div>
+                    <div class="skill_text">Github</div>
                 </div>
                 <div class="skill_container">
-                    <div class="tooltip">
-                        <div class="skill_text">Web Development</div><span class="tooltiptext">Familiar with HTML, CSS, Javascript, and Bootstrap; took a course in web development and created this website as a personal project</span>
-                    </div>
+                    <div class="skill_text">Web Development</div>
                 </div>
                 <div class="skill_container">
-                    <div class="tooltip">
-                        <div class="skill_text">HTML/CSS</div><span class="tooltiptext">Course and this website</span>
-                    </div>
+                    <div class="skill_text">HTML/CSS</div>
                 </div>
                 <div class="skill_container">
-                    <div class="tooltip">
-                        <div class="skill_text">Javascript</div><span class="tooltiptext">Course and this website</span>
-                    </div>
+                    <div class="skill_text">Javascript</div>
                 </div>
                 <div class="skill_container">
-                    <div class="tooltip">
-                        <div class="skill_text">SQL</div><span class="tooltiptext">Familiar with mySQL and SQL Server</span>
-                    </div>
+                    <div class="skill_text">SQL</div>
                 </div>
                 <div class="skill_container">
-                    <div class="tooltip">
-                        <div class="skill_text">Automated Testing</div><span class="tooltiptext">Created a suite of automated tests at Servant Systems using the Jasmine &amp; Selenium framework</span>
-                    </div>
+                    <div class="skill_text">Automated Testing</div>
                 </div>
             </div>
         </div>
@@ -309,6 +282,17 @@
         </div>
 
         <div class="projects_div">
+            <div class="divIndexProjects">
+                <h1 class="projects-h1"><center>Todo App</center></h1>
+                <img class="img-padding-top" src="static/todo.png"/ alt="" >
+                <div class="buttons">
+                    <div class="tooltip">
+                        <input class="left-button" type="submit" value="Description">
+                        <span class="tooltiptext">A simple Todo application built using ASP.NET Core MVC framework. It allows you to create, read, update and delete tasks.<span>
+                    </div>
+                    <a href="https://github.com/nkathawa/Todo" target="_blank"><input type="submit" value="Code"></a>
+                </div>
+            </div>
             <div class="divIndexProjects">
                 <h1 class="projects-h1"><center>Personal Website</center></h1>
                 <img class="img-padding-top" src="static/websiteIcon.png"/ alt="" >
@@ -338,6 +322,29 @@
                     <div class="tooltip">
                         <input class="left-button" type="submit" value="Description">
                         <span class="tooltiptext">A project I worked on during one of my rotations at Domino's. The project helps store teams prepare orders ahead of time. I was the sole backend developer, and involved with architecture, monitoring, and remediation.<span>
+                    </div>
+                </div>
+            </div>
+            <div class="divIndexProjects">
+                <h1 class="projects-h1"><center>Service Health Check</center></h1>
+                <img class="img-padding-top" src="static/dpzLogo.png"/ alt="" >
+                <div class="buttons">
+                    <div class="tooltip">
+                        <input class="left-button" type="submit" value="Description">
+                        <span class="tooltiptext">Developed a tool to check the health of all services, and to gather relevant data to ensure
+                            apps are running with the proper versions, saving time and finding issues by automatically running during releases
+                            and datacenter moves.<span>
+                    </div>
+                </div>
+            </div>
+            <div class="divIndexProjects">
+                <h1 class="projects-h1"><center>Environment Audit Tool</center></h1>
+                <img class="img-padding-top" src="static/dpzLogo.png"/ alt="" >
+                <div class="buttons">
+                    <div class="tooltip">
+                        <input class="left-button" type="submit" value="Description">
+                        <span class="tooltiptext">Created a tool for comparing environment configurations to ensure consistency across
+                            CPU, memory, ulimits, opt size, kernel versions.<span>
                     </div>
                 </div>
             </div>
