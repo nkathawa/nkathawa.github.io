@@ -26,7 +26,6 @@
             <div class="dropdown">
                 <button class="dropbtn"><a href="#resume">Resume &#9660;</a></button>
                 <div class="dropdown-content">
-                    <a href="#download">Download</a>
                     <a href="#experience">Experience</a>
                     <a href="#education">Education</a>
                     <a href="#skills">My Skills and Languages</a>
@@ -74,13 +73,6 @@
             <p class="title">My Resume</p>
         </div>
 
-        <div id="download"></div><div></div>
-        <div class="divIndex">
-            <h1>Download</h1>
-            <p>Click the button below to view and download my resume in PDF format.</p>
-            <button onclick="downloadPDF()">Download PDF</button>
-        </div>
-
         <div id="experience"></div><div></div>
         <div class="divIndex">
             <h1>Work Experience</h1>
@@ -92,10 +84,14 @@
                 <p><b>Software Engineer</b></p>
                 <p>01/2023 - 06/2023</p>
                 <ul>
-                    <li><b>Service Maintenance</b> Analyzed and updated a critical platform component by refactoring code, 
-                        adding unit tests to increase coverage, and improving documentation all while ensuring functionality was maintained
+                    <li><b>Service Maintenance</b>: Analyzed and updated the Kafka custom connector, a critical platform component for loading data
+                        to and from JDBC-compatible databases. Refactored code using design patterns and recommendations from Sonar, added
+                        unit tests to increase coverage from 20% to 80%, and improved documentation all while ensuring functionality was
+                        maintained
                     </li>
-                    <li><b>Bug Fixes</b> Addressed bugs to improve the resiliency and maintainability of the ASP.NET Core platform
+                    <li><b>Bug Fixes</b>: Addressed bugs to improve the resiliency and maintainability of the ASP.NET Core platform. Worked with both
+                        the frontend React and cshtml code and the .NET backend to deliver timely and thorough bug fixes, working closely with QA
+                        and product owners in order to ensure correct functionality and stable performance
                     </li>
                 </ul>
               </div>
@@ -106,11 +102,14 @@
                 <p><b>Software Engineer</b></p>
                 <p>05/2022 - 11/2022</p>
                 <ul>
-                    <li><b>Feature Development</b>: Developed new features for the CRM and seamless integrations with the parent company
-                        in PHP, GraphQL, and SQL using Docker, Git, Jenkins, and Visual Studio
+                    <li><b>Feature Development</b>: Developed new features for the CRM, such as multifactor authentication, in PHP, GraphQL, and
+                        SQL using Docker, Git, Jenkins, and Visual Studio. Worked closely with the acquiring digital marketing firm to integrate
+                        with their customer data and APIs, allowing for customer data to be shared between both companies and for customers to
+                        have access to the wide array of tools available from both firms
                     </li>
-                    <li><b>Escalations</b>: Effectively handled customer escalations in a timely manner, utilizing 
-                        both troubleshooting skills and clear communication with the support team
+                    <li><b>Escalations</b>: Effectively handled customer escalations in a timely manner, working closely with stakeholders and the support
+                        team to understand and resolve issues. Utilized troubleshooting skills and clear communication, added findings to the tickets
+                        in order to keep the team in the loop, and created PRs that addressed the issues with clarity and conciseness
                     </li>
                 </ul>
               </div>
@@ -121,15 +120,15 @@
                 <p><b>Site Reliability and DevOps Engineer</b></p>
                 <p>01/2020 - 05/2022</p>
                 <ul>
-                    <li><b>PKS (Kubernetes)</b>: Worked to implement PKS within the environment, which involved 
-                    cluster buildout, environment configuration, monitoring, Helm chart development, and 
-                    infrastructure-as-code</li>
-                    <li><b>JenkinsX</b>: Built out JenkinsX within the PKS environment using Helm charts and 
-                    running end-to-end validation scripts for each update</li>
-                    <li><b>Java Installation Automation</b>: Developed a method for seamless and automated 
-                    java installation for runtime environments, cutting time spent by SRE resources 
-                    installing java on VMs</li>
-                    <li><b>Other Automation</b>: Developed Jenkins jobs for automating various manual tasks</li>
+                    <li><b>Kubernetes</b>: Worked to implement Pivotal Kubernetes Service (PKS) within the environment, which involved cluster
+                        buildout, environment configuration, monitoring, Helm chart development, and infrastructure-as-code</li>
+                    <li><b>JenkinsX</b>: Built out JenkinsX within the PKS environment using Helm charts and running end-to-end validation scripts for
+                        each update to ensure the environment was stable and contained the latest changes, allowing for more rapid development</li>
+                    <li><b>Java Installation Automation</b>: Developed a method for seamless and automated Java installation for runtime
+                        environments, cutting time spent by SRE resources installing Java on VMs. The change empowered development teams to
+                        more easily upgrade the JDK version for their own services, increasing the security and reliability of their applications</li>
+                    <li><b>General Automation</b>: Developed Jenkins jobs for automating various manual tasks, working with a technical delivery
+                        manager to provide data on potential time savings and error reduction</li>
                 </ul>
               </div>
               <div class="workSlides fade">
@@ -139,19 +138,18 @@
                 <p><b>Technology Rotation Program</b></p>
                 <p>06/2018 - 12/2019</p>
                 <ul>
-                    <li><b>Digital Shoulder Surfing</b>: Working on a lean team as the sole backend developer, used Java, Spring framework,
-                        Maven, ActiveMQ and other tools to develop the backend service for a technology which enables in-store employees
-                        to see order information ahead of time, allowing them to prepare orders more quickly
+                    <li><b>Digital Shoulder Surfing</b>: Working on a lean team as the sole backend developer, used Java, Spring framework, Maven,
+                        ActiveMQ and other tools to develop the backend service for a technology which enables in-store employees to see order
+                        information ahead of time, allowing them to prepare orders more quickly
                     </li>
-                    <li><b>Service Health Tool</b>: Developed a tool to check the health of all services, and to gather relevant data to ensure
-                        apps are running with the proper versions, saving time and finding issues by automatically running during releases
-                        and datacenter moves
+                    <li><b>Service Health Tool</b>: Developed a tool to check the health of all services, and to gather relevant data to ensure apps are
+                        running with the proper versions, saving time and finding issues by running during releases and datacenter changes. The tool
+                        automatically attempted to restart down services, improving the resiliency and maintainability of the environment
                     </li>
-                    <li><b>Environment Audit Tool</b>: Created a tool for comparing environment configurations to ensure consistency across
-                        CPU, memory, ulimits, opt size, kernel versions
+                    <li><b>Environment Audit Tool</b>: Created a tool for comparing environment configurations to ensure consistency across CPU,
+                        memory, ulimits, opt size, and kernel versions. This provided a first pass to find issues in the environment, saving time and
+                        reducing manual effort
                     </li>
-                    <li><b>PayPal Integration</b>: Integrated PayPal with our point-of-sales system</li>
-                    <li><b>Store Map Integration</b>: Implemented a store locator map within the Dominos app</li>
                 </ul>
               </div>
               <div class="workSlides fade">
