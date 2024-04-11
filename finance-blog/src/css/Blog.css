@@ -1,0 +1,31 @@
+/* Blog styles */
+.article-preview {
+    background: #fff;
+    border-bottom: 1px solid #ddd;
+    padding: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .article-preview h2 {
+    margin-top: 0;
+    color: #333;
+  }
+  
+  .article-preview p {
+    color: #666;
+  }
+  
+  .article-preview a {
+    display: inline-block;
+    margin-top: 10px;
+    text-decoration: none;
+    background: #0056b3;
+    color: #fff;
+    padding: 6px 12px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+  }
+  
+  .article-preview a:hover {
+    background-color: #003973;
+  }
