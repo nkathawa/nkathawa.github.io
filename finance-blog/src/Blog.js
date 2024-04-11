@@ -1,21 +1,17 @@
 import './css/Blog.css';
 import React from 'react';
 import { Link } from 'react-router-dom';
-
-const articles = [
-  { id: 1, title: 'First Article', excerpt: 'This is the first articles excerpt...' },
-  // ... add more articles as needed
-];
+import articles from './articles';
 
 function Blog() {
   return (
     <div>
-      <h1>Blog Articles</h1>
-      {articles.map((article) => (
-        <div key={article.id} className='article-preview'>
+      <h1>Blog</h1>
+      {Object.entries(articles).map(([id, article]) => (
+        <div key={id} className="article-preview">
           <h2>{article.title}</h2>
           <p>{article.excerpt}</p>
-          <Link to={`/article/${article.id}`}>Read More</Link>
+          <Link to={`/article/${id}`}>Read More</Link>
         </div>
       ))}
     </div>

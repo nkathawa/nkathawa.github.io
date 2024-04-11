@@ -1,0 +1,52 @@
+.divIndex {
+    /* Styles for .divIndex */
+}
+  
+.container {
+    /* Styles for .container, like max-width and margins for form alignment */
+    max-width: 600px;
+    margin: auto;
+    padding: 1em;
+    background-color: #f3f3f3;
+    border-radius: 5px;
+}
+
+.container label {
+    /* Style your label */
+    display: block;
+    margin-top: 20px;
+}
+
+.container input[type="text"],
+.container textarea,
+.container input[type="email"],
+.container input[type="submit"] {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+}
+
+.container textarea {
+    /* Style your textarea */
+    height: 200px; /* Replaces the inline height property */
+    resize: vertical; /* Allows resizing */
+}
+
+.container input[type="submit"] {
+    /* Style your submit button */
+    background-color: #0056b3;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.container input[type="submit"]:hover {
+    background-color: #003973;
+}
+
+.gotcha {
+    /* Used for the _gotcha input for spam filtering. It should not be visible. */
+    display: none;
+}
