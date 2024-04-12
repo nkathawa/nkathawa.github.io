@@ -1,9 +1,7 @@
 import budgeting101 from './budgeting101';
-import retirement from './retirement';
 
 const articles = {
-    budgeting101: { component: budgeting101, title: 'Budgeting 101', excerpt: 'I firmly believe that a budget is the foundation of good finances...' },
-    retirement: { component: retirement, title: 'Retirement', excerpt: 'I get it: retirement isn\'t something you want to think about in your 20s...' },
+    budgeting101: { component: budgeting101, title: 'Budgeting 101', date: 'April 12, 2024', excerpt: 'I firmly believe that a budget is the foundation of good finances. I highly recommend starting any financial journey with a sound budget, as it provides [...]' },
 };
 
 export default articles;
