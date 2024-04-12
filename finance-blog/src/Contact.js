@@ -4,6 +4,7 @@ import './css/Contact.css';
 function Contact() {
   return (
     <div>
+        <h1>Contact Me</h1>
         <div className="container">
             <form action="https://formspree.io/nkathawa@umich.edu" method="POST">
                 <label htmlFor="fname">Full Name</label>
