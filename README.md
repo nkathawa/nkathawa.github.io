@@ -1,1 +1,1 @@
-This is my repository for my personal website, created using HTML, CSS, and Javascript!
+This is my personal repository, which contains a react app blog about personal finances.
