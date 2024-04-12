@@ -12,11 +12,11 @@ function Home() {
         I firmly believe that financial freedom can be achieved through the implementation of simple principles. It requires work, dedication, and sacrifice, but is absolutely attainable.
       </p>
       <p>
-        In this blog, I will attempt to walk through various strategies, from budgeting to investing and everything in between. Half the battle is mental - overcoming mental hurdles,
-        gaining new knowledge that can empower you to take control of your finances - these are the building blocks of sound personal finance.
+        In this blog, I will attempt to walk through various strategies, from budgeting to investing and everything in between. Half the battle is mental – overcoming mental hurdles,
+        gaining new knowledge that can empower you to take control of your finances – these are the building blocks of sound personal finance.
       </p>
       <p>
-        I have no formal financial education - I am completely self-taught. I believe in everything that I write here, not just because it makes sense to me, but because I live it.
+        I have no formal financial education – I am completely self-taught. I believe in everything that I write here, not just because it makes sense to me, but because I live it.
         I implement these strategies in my own life, and it has brought about a degree of financial peace I never thought was possible.
       </p>
       <p>
