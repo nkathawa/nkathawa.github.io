@@ -12,7 +12,7 @@ function Blog() {
           <h2>{article.title}</h2>
           <i>{article.date}</i>
           <p>{article.excerpt}</p>
-          <Link to={`/article/${id}`}>Read More</Link>
+          <Link to={`/finances/article/${id}`}>Read More</Link>
         </div>
       ))}
       <p>More posts coming soon!</p>
