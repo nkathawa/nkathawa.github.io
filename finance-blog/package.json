@@ -20,7 +20,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
-  "homepage": "http://navinkathawa.com",
+  "homepage": "https://nkathawa.github.io",
   "eslintConfig": {
     "extends": [
       "react-app",
