@@ -22,64 +22,42 @@ const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
+    setSubmitStatus(null);
     
-    // Simulate form submission
-    setTimeout(() => {
-      setIsSubmitting(false);
-      setSubmitStatus('success');
-      setFormData({ name: '', email: '', subject: '', message: '' });
-      
-      // Reset status after 3 seconds
-      setTimeout(() => setSubmitStatus(null), 3000);
-    }, 1000);
-  };
+    try {
+      const response = await fetch('https://formspree.io/nkathawa@umich.edu', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
 
-  const contactInfo = [
-    {
-      icon: '🌐',
-      title: 'Website',
-      value: 'navinkathawa.com',
-      link: 'http://www.navinkathawa.com/'
-    },
-    {
-      icon: '📍',
-      title: 'Location',
-      value: 'Ann Arbor, MI',
-      link: null
+      if (response.ok) {
+        setSubmitStatus('success');
+        setFormData({ name: '', email: '', subject: '', message: '' });
+      } else {
+        setSubmitStatus('error');
+      }
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      setSubmitStatus('error');
+    } finally {
+      setIsSubmitting(false);
+      // Reset status after 5 seconds
+      setTimeout(() => setSubmitStatus(null), 5000);
     }
-  ];
+  };
 
   return (
     <div className="contact">
       <div className="container">
         <div className="contact-header">
           <h1>Get In Touch</h1>
-          <p>I'd love to hear from you! Whether you have a question about my work, want to discuss a project, or just want to say hello, feel free to reach out through the form below.</p>
+          <p>I'd love to hear from you! Whether you have a question about my work, want to discuss a project, have a personal finance question, or just want to say hello, feel free to reach out through the form below.</p>
         </div>
 
         <div className="contact-content">
-          {/* Contact Information */}
-          <div className="contact-info">
-            <h2>Contact Information</h2>
-            <div className="info-grid">
-              {contactInfo.map((info, index) => (
-                <div key={index} className="info-card">
-                  <div className="info-icon">{info.icon}</div>
-                  <div className="info-content">
-                    <h3>{info.title}</h3>
-                    {info.link ? (
-                      <a href={info.link} target="_blank" rel="noopener noreferrer">
-                        {info.value}
-                      </a>
-                    ) : (
-                      <span>{info.value}</span>
-                    )}
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-
           {/* Contact Form */}
           <div className="contact-form">
             <h2>Send Me a Message</h2>
@@ -149,25 +127,13 @@ const Contact = () => {
                   ✅ Thank you! Your message has been sent successfully.
                 </div>
               )}
-            </form>
-          </div>
-        </div>
 
-        {/* Additional Info */}
-        <div className="contact-footer">
-          <div className="availability">
-            <h3>📅 Availability</h3>
-            <p>I'm currently employed at Michigan Medicine but always open to interesting opportunities and collaborations. I typically respond to messages within 24 hours.</p>
-          </div>
-          
-          <div className="preferences">
-            <h3>💡 What I'm Looking For</h3>
-            <ul>
-              <li>Healthcare technology opportunities</li>
-              <li>DevOps and infrastructure projects</li>
-              <li>Full-stack development roles</li>
-              <li>Open source contributions</li>
-            </ul>
+              {submitStatus === 'error' && (
+                <div className="error-message">
+                  ❌ Sorry, there was an error sending your message. Please try again or contact me directly.
+                </div>
+              )}
+            </form>
           </div>
         </div>
       </div>
