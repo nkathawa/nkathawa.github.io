@@ -1,1 +1,1 @@
-This is my personal repository, which contains a react app blog about personal finances.
+This is my personal repository, which contains my personal website showcasing my work, resume, finance blog, and contact information.
