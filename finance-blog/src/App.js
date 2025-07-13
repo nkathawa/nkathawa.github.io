@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import './css/App.css';
 import Home from './components/Home';
@@ -14,6 +14,33 @@ function AppContent() {
 
   // Check if we're on an article page
   const isArticlePage = location.pathname.startsWith('/article/');
+
+  // Scroll to top on page load and location changes
+  useEffect(() => {
+    // Prevent scroll restoration
+    if ('scrollRestoration' in window.history) {
+      window.history.scrollRestoration = 'manual';
+    }
+    
+    // Scroll to top immediately
+    window.scrollTo(0, 0);
+    
+    return () => {};
+  }, [location.pathname]);
+
+  // Additional effect to handle page reloads
+  useEffect(() => {
+    const handleBeforeUnload = () => {
+      // Clear any stored scroll position
+      sessionStorage.removeItem('scrollPosition');
+    };
+
+    window.addEventListener('beforeunload', handleBeforeUnload);
+    
+    return () => {
+      window.removeEventListener('beforeunload', handleBeforeUnload);
+    };
+  }, []);
 
   const renderContent = () => {
     switch (activeTab) {
