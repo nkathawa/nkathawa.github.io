@@ -20,7 +20,7 @@ const Navbar = ({ activeTab, setActiveTab }) => {
       <div className="navbar-container">
         <div className="navbar-brand">
           <h1>Navin Kathawa</h1>
-          <span className="brand-subtitle">Software Developer & Personal Finance Enthusiast1</span>
+          <span className="brand-subtitle">Software Developer & Personal Finance Enthusiast</span>
         </div>
         
         <div className="navbar-tabs">
