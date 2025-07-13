@@ -6,7 +6,7 @@ function Contact() {
     <div>
         <h1>Contact Me</h1>
         <div className="container">
-            <form action="https://formspree.io/nkathawa@umich.edu" method="POST">
+            <form action="https://formspree.io/f/mnnzadjk" method="POST">
                 <label htmlFor="fname">Full Name</label>
                 <input type="text" id="fname" name="fullname" placeholder="Your full name"/>
                 <label htmlFor="email">Email</label>

@@ -25,7 +25,7 @@ const Contact = () => {
     setSubmitStatus(null);
     
     try {
-      const response = await fetch('https://formspree.io/nkathawa@umich.edu', {
+      const response = await fetch('https://formspree.io/f/mnnzadjk', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

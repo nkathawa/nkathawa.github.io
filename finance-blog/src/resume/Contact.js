@@ -6,7 +6,7 @@ function Contact() {
     <section id="contact" className="divIndex">
       <h1>Contact Me</h1>
       <div className="container">
-        <form action="https://formspree.io/f/{your-id}" method="POST">
+        <form action="https://formspree.io/f/mnnzadjk}" method="POST">
           <label htmlFor="fullname">Full Name</label>
           <input type="text" id="fullname" name="fullname" placeholder="Your full name" required />
           
