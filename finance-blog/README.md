@@ -84,7 +84,6 @@ The website is fully responsive and optimized for:
 - Work experience with company details
 - Education background
 - Skills organized by category
-- Download resume option
 
 ### Finances
 - Personal finance introduction

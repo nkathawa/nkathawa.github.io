@@ -45,7 +45,7 @@ function AppContent() {
   const renderContent = () => {
     switch (activeTab) {
       case 'home':
-        return <Home />;
+        return <Home setActiveTab={setActiveTab} />;
       case 'resume':
         return <Resume />;
       case 'finances':
@@ -53,7 +53,7 @@ function AppContent() {
       case 'contact':
         return <Contact />;
       default:
-        return <Home />;
+        return <Home setActiveTab={setActiveTab} />;
     }
   };
 

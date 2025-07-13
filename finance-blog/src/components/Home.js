@@ -1,7 +1,17 @@
 import React from 'react';
 import './Home.css';
 
-const Home = () => {
+const Home = ({ setActiveTab }) => {
+  const handleViewWork = () => {
+    setActiveTab('resume');
+    window.scrollTo(0, 0);
+  };
+
+  const handleGetInTouch = () => {
+    setActiveTab('contact');
+    window.scrollTo(0, 0);
+  };
+
   return (
     <div className="home">
       {/* Hero Section */}
@@ -16,8 +26,8 @@ const Home = () => {
               Specializing in full-stack development, DevOps, and digital pathology tools.
             </p>
             <div className="hero-buttons">
-              <button className="btn btn-primary">View My Work</button>
-              <button className="btn btn-secondary">Get In Touch</button>
+              <button className="btn btn-primary" onClick={handleViewWork}>View My Work</button>
+              <button className="btn btn-secondary" onClick={handleGetInTouch}>Get In Touch</button>
             </div>
           </div>
           <div className="hero-image">
@@ -27,16 +37,16 @@ const Home = () => {
               </div>
               <div className="profile-stats">
                 <div className="stat">
-                  <span className="stat-number">6+</span>
+                  <span className="stat-number">{new Date().getFullYear() - 2018}+</span>
                   <span className="stat-label">Years Experience</span>
                 </div>
                 <div className="stat">
-                  <span className="stat-number">5</span>
+                  <span className="stat-number">4</span>
                   <span className="stat-label">Companies</span>
                 </div>
                 <div className="stat">
-                  <span className="stat-number">15+</span>
-                  <span className="stat-label">Technologies</span>
+                  <span className="stat-number">3</span>
+                  <span className="stat-label">Industries</span>
                 </div>
               </div>
             </div>

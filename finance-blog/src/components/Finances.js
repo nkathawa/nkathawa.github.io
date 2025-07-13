@@ -123,12 +123,8 @@ const Finances = () => {
                     <span className="stat-label">Self-Taught</span>
                   </div>
                   <div className="stat-card">
-                    <span className="stat-number">6+</span>
+                    <span className="stat-number">{new Date().getFullYear() - 2018}+</span>
                     <span className="stat-label">Years Experience</span>
-                  </div>
-                  <div className="stat-card">
-                    <span className="stat-number">50+</span>
-                    <span className="stat-label">Articles Written</span>
                   </div>
                 </div>
               </div>
@@ -158,10 +154,6 @@ const Finances = () => {
                     </div>
                   </div>
                 ))}
-              </div>
-              <div className="blog-footer">
-                <p>More posts coming soon! Subscribe to stay updated.</p>
-                <button className="btn btn-primary">Subscribe to Newsletter</button>
               </div>
             </section>
           )}
