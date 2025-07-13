@@ -19,16 +19,16 @@ jobs:
       with:
         node-version: '18'
         cache: 'npm'
-        cache-dependency-path: finance-blog/package-lock.json
+        cache-dependency-path: personal-website/package-lock.json
         
     - name: Install dependencies
       run: |
-        cd finance-blog
+        cd personal-website
         npm ci
         
     - name: Build
       run: |
-        cd finance-blog
+        cd personal-website
         npm run build
         
     - name: Deploy to GitHub Pages
@@ -36,5 +36,5 @@ jobs:
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./finance-blog/build
+        publish_dir: ./personal-website/build
         cname: nkathawa.github.io 
