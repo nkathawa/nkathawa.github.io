@@ -194,7 +194,14 @@
 }
 
 .education-header {
-  text-align: center;
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  text-align: left;
+}
+
+.education-info {
+  flex: 1;
 }
 
 .institution {
@@ -324,11 +331,9 @@
   }
   
   .education-header {
-    text-align: left;
-  }
-  
-  .institution {
-    font-size: 1.25rem;
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
   }
 }
 

@@ -23,7 +23,7 @@ const Home = ({ setActiveTab }) => {
             </h1>
             <p className="hero-subtitle">
               Software Engineer passionate about creating innovative solutions and sharing financial wisdom. 
-              Specializing in full-stack development, DevOps, and digital pathology tools.
+              Specializing in full-stack development, process automation and optimization, and digital pathology tools.
             </p>
             <div className="hero-buttons">
               <button className="btn btn-primary" onClick={handleViewWork}>View My Work</button>
@@ -61,7 +61,7 @@ const Home = ({ setActiveTab }) => {
           <div className="about-content">
             <div className="about-text">
               <p>
-                I'm a Software Engineer with over 6 years of experience in full-stack development, DevOps, and system architecture. 
+                I'm a Software Engineer with over {new Date().getFullYear() - 2018} years of experience in full-stack development, DevOps, and system architecture. 
                 Currently working at Michigan Medicine, I design and develop tools that improve digital pathology workflows, 
                 helping medical professionals work more efficiently.
               </p>

@@ -86,8 +86,7 @@ const Resume = () => {
       institution: "The University of Michigan",
       degree: "Computer Science B.S.E.",
       location: "Ann Arbor, MI",
-      date: "09/2014 - 04/2018",
-      gpa: null
+      date: "09/2014 - 04/2018"
     }
   ];
 
@@ -152,11 +151,15 @@ const Resume = () => {
             {education.map((edu, index) => (
               <div key={index} className="education-card">
                 <div className="education-header">
-                  <h3 className="institution">{edu.institution}</h3>
-                  <p className="degree">{edu.degree}</p>
-                  <p className="location">{edu.location}</p>
-                  <p className="date">{edu.date}</p>
-                  {edu.gpa && <p className="gpa">GPA: {edu.gpa}</p>}
+                  <div className="company-logo">
+                    <img src="/michigan.png" alt="University of Michigan" />
+                  </div>
+                  <div className="education-info">
+                    <h3 className="institution">{edu.institution}</h3>
+                    <p className="degree">{edu.degree}</p>
+                    <p className="location">{edu.location}</p>
+                    <p className="date">{edu.date}</p>
+                  </div>
                 </div>
               </div>
             ))}
