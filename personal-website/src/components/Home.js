@@ -1,4 +1,10 @@
 import React from 'react';
+import { 
+  Code2, 
+  Wrench, 
+  HeartPulse, 
+  DollarSign 
+} from "lucide-react";
 import './Home.css';
 
 const Home = ({ setActiveTab }) => {
@@ -99,24 +105,43 @@ const Home = ({ setActiveTab }) => {
           <h2 className="section-title">What I Do</h2>
           <div className="services-grid">
             <div className="service-card">
-              <div className="service-icon">💻</div>
+              <div className="service-icon">
+                <Code2 size={32} strokeWidth={1.8} />
+              </div>
               <h3>Full-Stack Development</h3>
-              <p>Building complete web applications from frontend to backend using React, PHP, Java, and modern web technologies.</p>
+              <p>
+                Building complete web applications from frontend to backend using React, PHP, Java, and modern web technologies.
+              </p>
             </div>
+
             <div className="service-card">
-              <div className="service-icon">🔧</div>
+              <div className="service-icon">
+                <Wrench size={32} strokeWidth={1.8} />
+              </div>
               <h3>DevOps & Infrastructure</h3>
-              <p>Implementing CI/CD pipelines, containerization with Docker, and managing Kubernetes clusters for scalable deployments.</p>
+              <p>
+                Implementing CI/CD pipelines, containerization with Docker, and managing Kubernetes clusters for scalable deployments.
+              </p>
             </div>
+
             <div className="service-card">
-              <div className="service-icon">🏥</div>
+              <div className="service-icon">
+                <HeartPulse size={32} strokeWidth={1.8} />
+              </div>
               <h3>Healthcare Technology</h3>
-              <p>Developing digital pathology tools and medical workflow applications that improve healthcare delivery and efficiency.</p>
+              <p>
+                Developing digital pathology tools and medical workflow applications that improve healthcare delivery and efficiency.
+              </p>
             </div>
+
             <div className="service-card">
-              <div className="service-icon">💰</div>
+              <div className="service-icon">
+                <DollarSign size={32} strokeWidth={1.8} />
+              </div>
               <h3>Financial Education</h3>
-              <p>Sharing insights and strategies for personal finance, budgeting, and investment planning through my blog.</p>
+              <p>
+                Sharing insights and strategies for personal finance, budgeting, and investment planning through my blog.
+              </p>
             </div>
           </div>
         </div>

@@ -1,10 +1,38 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { Wallet, BarChart3, Target, CreditCard } from "lucide-react";
+import { BookOpen, PenLine, Lightbulb, Wrench } from "lucide-react";
 import './Finances.css';
 
 const Finances = () => {
   const [activeSection, setActiveSection] = useState('intro');
   const navigate = useNavigate();
+
+  const [currentAge, setCurrentAge] = React.useState('');
+  const [retirementAge, setRetirementAge] = React.useState('');
+  const [lifeExpectancy, setLifeExpectancy] = React.useState('');
+  const [currentAssets, setCurrentAssets] = React.useState('');
+  const [returnRate, setReturnRate] = React.useState('');
+  const [income, setIncome] = React.useState('');
+  const [savingsRate, setSavingsRate] = React.useState('');
+  const [monthlyRetirementIncome, setMonthlyRetirementIncome] = React.useState(null);
+
+  const calculateRetirement = () => {
+    const yearsToRetirement = retirementAge - currentAge;
+    const r = returnRate / 100;
+    const annualSavings = income * (savingsRate / 100);
+
+    let projectedAssets = currentAssets;
+
+    for (let i = 0; i < yearsToRetirement; i++) {
+      projectedAssets = projectedAssets * (1 + r) + annualSavings;
+    }
+
+    const annualRetirementIncome = projectedAssets * 0.04;
+    const monthlyIncome = annualRetirementIncome / 12;
+
+    setMonthlyRetirementIncome(monthlyIncome);
+  };
 
   const articles = [
     {
@@ -15,45 +43,29 @@ const Finances = () => {
       readTime: '5 min read',
       category: 'Budgeting'
     },
-    {
-      id: 'retirement',
-      title: 'Planning for Retirement: Start Early, Retire Comfortably',
-      date: 'March 28, 2024',
-      excerpt: 'The earlier you start planning for retirement, the better off you\'ll be. Discover strategies to build wealth for your golden years.',
-      readTime: '7 min read',
-      category: 'Retirement'
-    },
-    {
-      id: 'investing',
-      title: 'Investing Basics: Building Wealth Through Smart Investments',
-      date: 'March 15, 2024',
-      excerpt: 'Understanding the basics of investing can seem overwhelming. Let me break down the fundamentals to help you get started.',
-      readTime: '6 min read',
-      category: 'Investing'
-    }
   ];
 
   const financialTips = [
     {
-      icon: '💰',
-      title: 'Emergency Fund',
-      description: 'Build an emergency fund covering 3-6 months of expenses'
+      icon: Wallet,
+      title: "Emergency Fund",
+      description: "Build an emergency fund covering 3-6 months of expenses",
     },
     {
-      icon: '📊',
-      title: 'Track Spending',
-      description: 'Monitor your expenses to identify areas for improvement'
+      icon: BarChart3,
+      title: "Track Spending",
+      description: "Monitor your expenses to identify areas for improvement",
     },
     {
-      icon: '🎯',
-      title: 'Set Goals',
-      description: 'Define clear financial goals and create a plan to achieve them'
+      icon: Target,
+      title: "Set Goals",
+      description: "Define clear financial goals and create a plan to achieve them",
     },
     {
-      icon: '💳',
-      title: 'Debt Management',
-      description: 'Prioritize high-interest debt and create a payoff strategy'
-    }
+      icon: CreditCard,
+      title: "Debt Management",
+      description: "Prioritize high-interest debt and create a payoff strategy",
+    },
   ];
 
   const handleReadMore = (articleId) => {
@@ -69,19 +81,51 @@ const Finances = () => {
             className={`nav-btn ${activeSection === 'intro' ? 'active' : ''}`}
             onClick={() => setActiveSection('intro')}
           >
-            📖 Introduction
+            <BookOpen
+              size={18}
+              strokeWidth={1.8}
+              style={{ marginRight: '8px', position: 'relative', top: '3px' }}
+            />
+            Introduction
           </button>
+
           <button 
             className={`nav-btn ${activeSection === 'blog' ? 'active' : ''}`}
             onClick={() => setActiveSection('blog')}
           >
-            📝 Blog Posts
+            <PenLine 
+              size={18} 
+              strokeWidth={1.8} 
+              className="nav-icon"
+              style={{ marginRight: '8px', position: 'relative', top: '3px' }}
+            />
+            Blog Posts
           </button>
+
           <button 
             className={`nav-btn ${activeSection === 'tips' ? 'active' : ''}`}
             onClick={() => setActiveSection('tips')}
           >
-            💡 Financial Tips
+            <Lightbulb 
+              size={18} 
+              strokeWidth={1.8} 
+              className="nav-icon"
+              style={{ marginRight: '8px', position: 'relative', top: '3px' }} 
+            />
+            Financial Tips
+          </button>
+
+          <button 
+            className={`nav-btn ${activeSection === 'tools' ? 'active' : ''}`}
+            onClick={() => setActiveSection('tools')}
+          >
+            <Wrench 
+              size={18} 
+              strokeWidth={1.8} 
+              className="nav-icon"
+              style={{ marginRight: '8px', position: 'relative', top: '3px' }}
+            />
+            Tools
           </button>
         </div>
 
@@ -162,37 +206,174 @@ const Finances = () => {
             <section className="tips-section">
               <h2>Essential Financial Tips</h2>
               <div className="tips-grid">
-                {financialTips.map((tip, index) => (
-                  <div key={index} className="tip-card">
-                    <div className="tip-icon">{tip.icon}</div>
-                    <h3 className="tip-title">{tip.title}</h3>
-                    <p className="tip-description">{tip.description}</p>
-                  </div>
-                ))}
+                {financialTips.map((tip, index) => {
+                  const Icon = tip.icon;
+
+                  return (
+                    <div key={index} className="flex items-start gap-3">
+                      <Icon className="w-6 h-6 text-green-600" />
+                      <div>
+                        <h3 className="font-semibold">{tip.title}</h3>
+                        <p className="text-sm text-gray-600">{tip.description}</p>
+                      </div>
+                    </div>
+                  );
+                })}
               </div>
               
               <div className="resources-section">
                 <h3>Additional Resources</h3>
                 <div className="resources-grid">
                   <div className="resource-card">
-                    <h4>📚 Recommended Books</h4>
+                    <h4>Recommended Books</h4>
                     <ul>
-                      <li>"The Total Money Makeover" by Dave Ramsey</li>
+                      <li>"The Simple Path to Wealth" by JL Collins</li>
                       <li>"Rich Dad Poor Dad" by Robert Kiyosaki</li>
-                      <li>"The Millionaire Next Door" by Thomas Stanley</li>
                     </ul>
                   </div>
                   <div className="resource-card">
-                    <h4>🛠️ Useful Tools</h4>
+                    <h4>Useful Tools</h4>
                     <ul>
-                      <li>Mint - Budget Tracking</li>
-                      <li>YNAB - You Need A Budget</li>
-                      <li>Personal Capital - Investment Tracking</li>
+                      <li>
+                        <a 
+                          href="https://actualbudget.org/" 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                        >
+                          Actual Budget
+                        </a>
+                      </li>
+                      <li>
+                        <a 
+                          href="https://www.bankrate.com/mortgages/mortgage-calculator//" 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                        >
+                          Mortgage Calculator
+                        </a>
+                      </li>
                     </ul>
                   </div>
                 </div>
               </div>
             </section>
+          )}
+
+          {activeSection === 'tools' && (
+            <div className="tool-card">
+              <h3 style={{ paddingBottom: '8px' }}>Retirement Calculator</h3>
+
+              <form
+                className="retirement-form"
+                onSubmit={(e) => {
+                  e.preventDefault();
+                  calculateRetirement();
+                }}
+              >
+                <div className="form-grid">
+                  <div className="form-group">
+                    <label>Current Age</label>
+                    <input
+                      type="number"
+                      value={currentAge}
+                      onChange={(e) => setCurrentAge(e.target.value)}
+                    />
+                  </div>
+
+                  <div className="form-group">
+                    <label>Retirement Age</label>
+                    <input
+                      type="number"
+                      value={retirementAge}
+                      onChange={(e) => setRetirementAge(e.target.value)}
+                    />
+                  </div>
+
+                  <div className="form-group">
+                    <label>Life Expectancy</label>
+                    <input
+                      type="number"
+                      value={lifeExpectancy}
+                      onChange={(e) => setLifeExpectancy(e.target.value)}
+                    />
+                  </div>
+
+                  <div className="form-group">
+                    <label>Current Assets ($)</label>
+                    <input
+                      type="number"
+                      value={currentAssets}
+                      onChange={(e) => setCurrentAssets(e.target.value)}
+                    />
+                  </div>
+
+                  <div className="form-group">
+                    <label>Real Investment Return (%)</label>
+                    <input
+                      type="number"
+                      step="0.1"
+                      value={returnRate}
+                      onChange={(e) => setReturnRate(e.target.value)}
+                    />
+                  </div>
+
+                  <div className="form-group">
+                    <label>Pre-Tax Income ($)</label>
+                    <input
+                      type="number"
+                      value={income}
+                      onChange={(e) => setIncome(e.target.value)}
+                    />
+                  </div>
+
+                  <div className="form-group">
+                    <label>Savings Rate (%)</label>
+                    <input
+                      type="number"
+                      step="0.1"
+                      value={savingsRate}
+                      onChange={(e) => setSavingsRate(e.target.value)}
+                    />
+                  </div>
+                </div>
+
+                <button
+                  type="submit"
+                  style={{
+                    width: '100%',
+                    backgroundColor: '#16a34a',
+                    color: '#ffffff',
+                    padding: '12px 20px',
+                    borderRadius: '8px',
+                    fontWeight: 600,
+                    fontSize: '16px',
+                    border: 'none',
+                    cursor: 'pointer',
+                    boxShadow: '0 4px 6px rgba(0,0,0,0.1)',
+                    transition: 'all 0.2s ease-in-out'
+                  }}
+                  onMouseEnter={e => e.currentTarget.style.backgroundColor = '#15803d'}
+                  onMouseLeave={e => e.currentTarget.style.backgroundColor = '#16a34a'}
+                  onMouseDown={e => e.currentTarget.style.transform = 'scale(0.97)'}
+                  onMouseUp={e => e.currentTarget.style.transform = 'scale(1)'}
+                >
+                  Calculate Retirement Income
+                </button>
+              </form>
+
+              {monthlyRetirementIncome !== null && (
+                <div className="retirement-result">
+                  <h4 style={{ paddingTop: '16px' }}>Estimated Monthly Retirement Income</h4>
+                  <div className="income-amount">
+                    $
+                    {monthlyRetirementIncome.toLocaleString(undefined, {
+                      maximumFractionDigits: 0,
+                    })}
+                  </div>
+                  <small>Based on the 4% withdrawal rule</small>
+                </div>
+              )}
+            </div>
           )}
         </div>
       </div>

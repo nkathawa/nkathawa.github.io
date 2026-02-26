@@ -3,10 +3,10 @@ import './Navbar.css';
 
 const Navbar = ({ activeTab, setActiveTab }) => {
   const tabs = [
-    { id: 'home', label: 'Home', icon: '🏠' },
-    { id: 'resume', label: 'Resume', icon: '📄' },
-    { id: 'finances', label: 'Finances', icon: '💰' },
-    { id: 'contact', label: 'Contact', icon: '📧' }
+    { id: 'home', label: 'Home' },
+    { id: 'resume', label: 'Resume' },
+    { id: 'finances', label: 'Finances' },
+    { id: 'contact', label: 'Contact' }
   ];
 
   const handleTabClick = (tabId) => {

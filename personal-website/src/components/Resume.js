@@ -105,7 +105,6 @@ const Resume = () => {
         {/* Experience Section */}
         <section className="resume-section">
           <h2 className="section-title">
-            <span className="section-icon">💼</span>
             Work Experience
           </h2>
           <div className="experience-grid">
@@ -144,7 +143,6 @@ const Resume = () => {
         {/* Education Section */}
         <section className="resume-section">
           <h2 className="section-title">
-            <span className="section-icon">🎓</span>
             Education
           </h2>
           <div className="education-grid">
@@ -169,7 +167,6 @@ const Resume = () => {
         {/* Skills Section */}
         <section className="resume-section">
           <h2 className="section-title">
-            <span className="section-icon">🛠️</span>
             Skills & Technologies
           </h2>
           <div className="skills-grid">
