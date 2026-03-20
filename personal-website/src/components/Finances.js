@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
 import { Wallet, BarChart3, Target, CreditCard } from "lucide-react";
 import { BookOpen, Lightbulb, Wrench } from "lucide-react";
 import { Link } from 'react-router-dom';
