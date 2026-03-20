@@ -90,19 +90,6 @@ const Finances = () => {
           </button>
 
           <button 
-            className={`nav-btn ${activeSection === 'blog' ? 'active' : ''}`}
-            onClick={() => setActiveSection('blog')}
-          >
-            <PenLine 
-              size={18} 
-              strokeWidth={1.8} 
-              className="nav-icon"
-              style={{ marginRight: '8px', position: 'relative', top: '3px' }}
-            />
-            Blog Posts
-          </button>
-
-          <button 
             className={`nav-btn ${activeSection === 'tips' ? 'active' : ''}`}
             onClick={() => setActiveSection('tips')}
           >
@@ -134,7 +121,7 @@ const Finances = () => {
           {activeSection === 'intro' && (
             <section className="intro-section">
               <div className="intro-header">
-                <h1>Personal Finance Blog</h1>
+                <h1>Personal Finances</h1>
                 <p className="intro-subtitle">Empowering you to achieve financial freedom through smart strategies and practical advice</p>
               </div>
               
@@ -142,21 +129,24 @@ const Finances = () => {
                 <div className="intro-text">
                   <h2>Welcome to My Financial Journey</h2>
                   <p>
-                    Thank you for visiting my personal finance blog. My name is Navin, and I'm passionate about helping others reach their financial goals. 
+                    Thank you for visiting my personal finances page. My name is Navin, and I'm passionate about helping others reach their financial goals. 
                     I firmly believe that financial freedom can be achieved through the implementation of simple principles. It requires work, dedication, and sacrifice, 
                     but is absolutely attainable.
                   </p>
                   <p>
-                    In this blog, I walk through various strategies, from budgeting to investing and everything in between. Half the battle is mental – overcoming mental hurdles,
+                    Half the battle is mental – overcoming mental hurdles,
                     gaining new knowledge that can empower you to take control of your finances – these are the building blocks of sound personal finance.
                   </p>
                   <p>
-                    I have no formal financial education – I am completely self-taught. I believe in everything that I write here, not just because it makes sense to me, 
+                    I have no formal financial education – I am completely self-taught. I believe in everything that I share here, not simply because it makes sense to me, 
                     but because I live it. I implement these strategies in my own life, and it has brought about a degree of financial peace I never thought was possible.
                   </p>
                   <p>
                     Especially in these current times of high inflation and high cost of living, along with wages not keeping up with either of those, 
-                    there is no more important time to make every dollar count. We will discuss how to make your life inflation-proof, how to live within 
+                    there is no more important time to make every dollar count. 
+                  </p>
+                  <p>
+                    If you're interested in learning more, head over to my Blog page, where we'll discuss how to make your life inflation-proof, how to live within 
                     (and below!) your means, and strategies for saving money.
                   </p>
                 </div>
@@ -171,33 +161,6 @@ const Finances = () => {
                     <span className="stat-label">Years Experience</span>
                   </div>
                 </div>
-              </div>
-            </section>
-          )}
-
-          {activeSection === 'blog' && (
-            <section className="blog-section">
-              <h2>Latest Articles</h2>
-              <div className="articles-grid">
-                {articles.map((article) => (
-                  <div key={article.id} className="article-card">
-                    <div className="article-header">
-                      <span className="article-category">{article.category}</span>
-                      <span className="article-read-time">{article.readTime}</span>
-                    </div>
-                    <h3 className="article-title">{article.title}</h3>
-                    <p className="article-excerpt">{article.excerpt}</p>
-                    <div className="article-footer">
-                      <span className="article-date">{article.date}</span>
-                      <button 
-                        className="read-more-btn"
-                        onClick={() => handleReadMore(article.id)}
-                      >
-                        Read More →
-                      </button>
-                    </div>
-                  </div>
-                ))}
               </div>
             </section>
           )}
