@@ -6,7 +6,8 @@ const Navbar = ({ activeTab, setActiveTab }) => {
     { id: 'home', label: 'Home' },
     { id: 'resume', label: 'Resume' },
     { id: 'finances', label: 'Finances' },
-    { id: 'contact', label: 'Contact' }
+    { id: 'contact', label: 'Contact' },
+    { id: 'blog', label: 'Blog' }
   ];
 
   const handleTabClick = (tabId) => {

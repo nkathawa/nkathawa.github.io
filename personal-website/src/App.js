@@ -6,6 +6,7 @@ import Resume from './components/Resume';
 import Finances from './components/Finances';
 import Contact from './components/Contact';
 import Article from './components/Article';
+import Blog from './components/Blog';
 import Navbar from './components/Navbar';
 
 function AppContent() {
@@ -52,6 +53,8 @@ function AppContent() {
         return <Finances />;
       case 'contact':
         return <Contact />;
+      case 'blog':
+        return <Blog />;
       default:
         return <Home setActiveTab={setActiveTab} />;
     }
@@ -63,6 +66,8 @@ function AppContent() {
       <main className="main-content">
         <Routes>
           <Route path="/" element={renderContent()} />
+          {/* <Route path="/article/:id" element={<Article />} /> */}
+          {/* <Route path="/blog" element={<Blog />} /> */}
           <Route path="/article/:id" element={<Article />} />
         </Routes>
       </main>
