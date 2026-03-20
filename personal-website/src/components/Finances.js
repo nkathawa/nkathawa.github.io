@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Wallet, BarChart3, Target, CreditCard } from "lucide-react";
 import { BookOpen, PenLine, Lightbulb, Wrench } from "lucide-react";
+import { Link } from 'react-router-dom';
 import './Finances.css';
 
 const Finances = () => {
@@ -67,10 +68,6 @@ const Finances = () => {
       description: "Prioritize high-interest debt and create a payoff strategy",
     },
   ];
-
-  const handleReadMore = (articleId) => {
-    navigate(`/article/${articleId}`);
-  };
 
   return (
     <div className="finances">
@@ -146,7 +143,9 @@ const Finances = () => {
                     there is no more important time to make every dollar count. 
                   </p>
                   <p>
-                    If you're interested in learning more, head over to my Blog page, where we'll discuss how to make your life inflation-proof, how to live within 
+                    If you're interested in learning more, head over to {' '}
+                    <Link to="/blog" className="inline-link">my Blog page</Link>, 
+                    where we'll discuss how to make your life inflation-proof, how to live within 
                     (and below!) your means, and strategies for saving money.
                   </p>
                 </div>

@@ -1,20 +1,23 @@
 import React from 'react';
-import { 
-  Code2, 
-  Wrench, 
-  HeartPulse, 
-  DollarSign 
+import { useNavigate } from 'react-router-dom';
+import {
+  Code2,
+  Wrench,
+  HeartPulse,
+  DollarSign
 } from "lucide-react";
 import './Home.css';
 
-const Home = ({ setActiveTab }) => {
+const Home = () => {
+  const navigate = useNavigate();
+
   const handleViewWork = () => {
-    setActiveTab('resume');
+    navigate('/resume');
     window.scrollTo(0, 0);
   };
 
   const handleGetInTouch = () => {
-    setActiveTab('contact');
+    navigate('/contact');
     window.scrollTo(0, 0);
   };
 
@@ -28,7 +31,7 @@ const Home = ({ setActiveTab }) => {
               Hi, I'm <span className="highlight">Navin Kathawa</span>
             </h1>
             <p className="hero-subtitle">
-              Software Engineer passionate about creating innovative solutions and sharing financial wisdom. 
+              Software Engineer passionate about creating innovative solutions and sharing financial wisdom.
               Specializing in full-stack development, process automation and optimization, and digital pathology tools.
             </p>
             <div className="hero-buttons">
@@ -67,28 +70,27 @@ const Home = ({ setActiveTab }) => {
           <div className="about-content">
             <div className="about-text">
               <p>
-                I'm a Software Engineer with over {new Date().getFullYear() - 2018} years of experience in full-stack development, DevOps, and system architecture. 
-                Currently working at Michigan Medicine, I design and develop tools that improve digital pathology workflows, 
+                I'm a Software Engineer with over {new Date().getFullYear() - 2018} years of experience in full-stack development, DevOps, and system architecture.
+                Currently working at Michigan Medicine, I design and develop tools that improve digital pathology workflows,
                 helping medical professionals work more efficiently.
               </p>
               <p>
-                My expertise spans from frontend development with React to backend systems using PHP, Java, and Python. 
-                I have extensive experience with DevOps practices, including Kubernetes, Docker, and CI/CD pipelines. 
+                My expertise spans from frontend development with React to backend systems using PHP, Java, and Python.
+                I have extensive experience with DevOps practices, including Kubernetes, Docker, and CI/CD pipelines.
                 When I'm not coding, I'm passionate about personal finance and helping others achieve financial freedom.
               </p>
               <p>
-                I believe in creating robust, maintainable solutions that solve real-world problems. 
-                My experience ranges from healthcare systems to e-commerce platforms, always focusing on 
+                I believe in creating robust, maintainable solutions that solve real-world problems.
+                My experience ranges from healthcare systems to e-commerce platforms, always focusing on
                 user experience and system reliability.
               </p>
             </div>
 
-            {/* Portrait photo */}
             <div className="about-photo-wrapper">
               <div className="about-photo">
-                <img 
-                  src="/hike.jpg" 
-                  alt="Switzerland" 
+                <img
+                  src="/hike.jpg"
+                  alt="Switzerland"
                 />
               </div>
             </div>

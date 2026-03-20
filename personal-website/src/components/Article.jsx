@@ -59,7 +59,7 @@ const Article = () => {
 
   return (
     <div className="article-wrapper">
-      <Link to="/" className="article-back">← Back to Blog</Link>
+      <Link to="/blog" className="article-back">← Back to Blog</Link>
 
       <article className="article">
         <header className="article-header">
@@ -101,7 +101,7 @@ const Article = () => {
       </article>
 
       <div className="article-bottom">
-        <Link to="/" className="article-back">← Browse more articles</Link>
+        <Link to="/blog" className="article-back">← Browse more articles</Link>
       </div>
     </div>
   );

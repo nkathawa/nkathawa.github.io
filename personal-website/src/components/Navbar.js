@@ -1,38 +1,43 @@
 import React from 'react';
+import { NavLink, useNavigate } from 'react-router-dom';
 import './Navbar.css';
 
-const Navbar = ({ activeTab, setActiveTab }) => {
+const Navbar = () => {
+  const navigate = useNavigate();
+
   const tabs = [
-    { id: 'home', label: 'Home' },
-    { id: 'resume', label: 'Resume' },
-    { id: 'finances', label: 'Finances' },
-    { id: 'contact', label: 'Contact' },
-    { id: 'blog', label: 'Blog' }
+    { path: '/', label: 'Home' },
+    { path: '/resume', label: 'Resume' },
+    { path: '/finances', label: 'Finances' },
+    { path: '/contact', label: 'Contact' },
+    { path: '/blog', label: 'Blog' },
   ];
 
-  const handleTabClick = (tabId) => {
-    setActiveTab(tabId);
-    // Instantly scroll to top of the page
+  const handleClick = () => {
     window.scrollTo(0, 0);
   };
 
   return (
     <nav className="navbar">
       <div className="navbar-container">
-        <div className="navbar-brand">
+        <div className="navbar-brand" onClick={() => { navigate('/'); window.scrollTo(0, 0); }}>
           <h1>Navin Kathawa</h1>
           <span className="brand-subtitle">Software Developer & Personal Finance Enthusiast</span>
         </div>
-        
+
         <div className="navbar-tabs">
           {tabs.map((tab) => (
-            <button
-              key={tab.id}
-              className={`nav-tab ${activeTab === tab.id ? 'active' : ''}`}
-              onClick={() => handleTabClick(tab.id)}
+            <NavLink
+              key={tab.path}
+              to={tab.path}
+              end={tab.path === '/'}
+              className={({ isActive }) =>
+                `nav-tab ${isActive ? 'active' : ''}`
+              }
+              onClick={handleClick}
             >
               <span className="tab-label">{tab.label}</span>
-            </button>
+            </NavLink>
           ))}
         </div>
       </div>
@@ -40,4 +45,4 @@ const Navbar = ({ activeTab, setActiveTab }) => {
   );
 };
 
-export default Navbar; 
+export default Navbar;

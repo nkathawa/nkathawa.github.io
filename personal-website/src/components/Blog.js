@@ -21,7 +21,7 @@ const Blog = () => {
   }, []);
 
   const handleReadMore = (articleId) => {
-    navigate(`/article/${articleId}`);
+    navigate(`/blog/article/${articleId}`);
   };
 
   const categories = ['All', ...new Set(articles.map(a => a.category).filter(Boolean))];
