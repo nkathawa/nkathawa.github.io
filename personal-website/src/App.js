@@ -67,7 +67,7 @@ function AppContent() {
         <Routes>
           <Route path="/" element={renderContent()} />
           {/* <Route path="/article/:id" element={<Article />} /> */}
-          {/* <Route path="/blog" element={<Blog />} /> */}
+          <Route path="/blog" element={<Blog />} />
           <Route path="/article/:id" element={<Article />} />
         </Routes>
       </main>

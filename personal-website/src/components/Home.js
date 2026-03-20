@@ -82,18 +82,29 @@ const Home = ({ setActiveTab }) => {
                 user experience and system reliability.
               </p>
             </div>
-            <div className="skills-preview">
-              <h3>Technologies I Work With</h3>
-              <div className="skills-grid">
-                <span className="skill-tag">React</span>
-                <span className="skill-tag">PHP</span>
-                <span className="skill-tag">Java</span>
-                <span className="skill-tag">Python</span>
-                <span className="skill-tag">Kubernetes</span>
-                <span className="skill-tag">Docker</span>
-                <span className="skill-tag">Jenkins</span>
-                <span className="skill-tag">SQL</span>
+
+            {/* Portrait photo */}
+            <div className="about-photo-wrapper">
+              <div className="about-photo">
+                <img 
+                  src="/hike.jpg" 
+                  alt="Switzerland" 
+                />
               </div>
+            </div>
+          </div>
+
+          <div className="skills-preview">
+            <h3>Technologies I Work With</h3>
+            <div className="skills-grid">
+              <span className="skill-tag">React</span>
+              <span className="skill-tag">PHP</span>
+              <span className="skill-tag">Java</span>
+              <span className="skill-tag">Python</span>
+              <span className="skill-tag">Kubernetes</span>
+              <span className="skill-tag">Docker</span>
+              <span className="skill-tag">Jenkins</span>
+              <span className="skill-tag">SQL</span>
             </div>
           </div>
         </div>
@@ -150,4 +161,4 @@ const Home = ({ setActiveTab }) => {
   );
 };
 
-export default Home; 
+export default Home;
