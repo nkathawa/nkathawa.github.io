@@ -24,7 +24,6 @@ const Blog = () => {
     navigate(`/article/${articleId}`);
   };
 
-  // Build category list dynamically from posts
   const categories = ['All', ...new Set(articles.map(a => a.category).filter(Boolean))];
 
   const normalize = (str) => (str || '').toLowerCase().trim();
@@ -35,28 +34,28 @@ const Blog = () => {
 
   return (
     <div className="blog">
-      <div className="container">
+      <div className="blog-container">
 
         {/* HEADER */}
-        <div className="blog-header">
-          <h1>Blog</h1>
+        <div className="blog-hero">
+          <h1 className="blog-title">Blog</h1>
           <p className="blog-subtitle">
             Musings on a variety of topics from faith to finances
           </p>
         </div>
 
         {/* FILTER BAR */}
-        <div className="filter-bar">
-          <div className="filter-label">
-            <Filter size={16} strokeWidth={1.8} />
+        <div className="blog-filter-bar">
+          <div className="blog-filter-label">
+            <Filter size={15} strokeWidth={2} />
             <span>Filter</span>
           </div>
 
-          <div className="filter-options">
+          <div className="blog-filter-options">
             {categories.map((cat) => (
               <button
                 key={cat}
-                className={`filter-btn ${activeFilter === cat ? 'active' : ''}`}
+                className={`blog-filter-btn ${activeFilter === cat ? 'active' : ''}`}
                 onClick={() => setActiveFilter(cat)}
               >
                 {cat}
@@ -68,39 +67,49 @@ const Blog = () => {
         {/* ARTICLES */}
         <div className="blog-content">
           {loading ? (
-            <p className="loading-text">Loading...</p>
+            <div className="blog-loading">
+              <div className="blog-spinner" />
+              <p>Loading posts...</p>
+            </div>
           ) : (
             <>
-              <p className="results-count">
+              <p className="blog-results-count">
                 {filteredArticles.length} {filteredArticles.length === 1 ? 'post' : 'posts'}
-                {activeFilter !== 'All' && ` in ${activeFilter}`}
+                {activeFilter !== 'All' && (
+                  <>
+                    {' '}in <strong>{activeFilter}</strong>
+                  </>
+                )}
               </p>
 
-              <div className="articles-grid">
+              <div className="blog-articles-list">
                 {filteredArticles.map((article) => (
-                  <div key={article.id} className="article-card">
-                    <div className="article-header">
-                      <span className="article-category">{article.category}</span>
-                      <span className="article-read-time">{article.readTime}</span>
+                  <div
+                    key={article.id}
+                    className="blog-card"
+                    onClick={() => handleReadMore(article.id)}
+                  >
+                    <div className="blog-card-top">
+                      <span className="blog-card-category">{article.category}</span>
+                      <span className="blog-card-read-time">{article.readTime}</span>
                     </div>
 
-                    <h3 className="article-title">{article.title}</h3>
-                    <p className="article-excerpt">{article.excerpt}</p>
+                    <h3 className="blog-card-title">{article.title}</h3>
+                    <p className="blog-card-excerpt">{article.excerpt}</p>
 
-                    <div className="article-footer">
-                      <span className="article-date">{article.date}</span>
-                      <button
-                        className="read-more-btn"
-                        onClick={() => handleReadMore(article.id)}
-                      >
+                    <div className="blog-card-bottom">
+                      <span className="blog-card-date">{article.date}</span>
+                      <span className="blog-card-link">
                         Read More →
-                      </button>
+                      </span>
                     </div>
                   </div>
                 ))}
 
                 {filteredArticles.length === 0 && (
-                  <p className="no-posts">No posts yet.</p>
+                  <div className="blog-empty">
+                    <p>No posts yet in this category.</p>
+                  </div>
                 )}
               </div>
             </>

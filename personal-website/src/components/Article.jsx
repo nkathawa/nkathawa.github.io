@@ -76,13 +76,23 @@ const Article = () => {
 
           {post.date && (
             <time className="article-date">
-              {new Date(post.date + "T00:00:00").toLocaleDateString('en-US', {
-                year: 'numeric',
-                month: 'long',
-                day: 'numeric',
-              })}
+                {(() => {
+                const parts = post.date.includes('/')
+                    ? post.date.split('/')
+                    : null;
+
+                const dateObj = parts
+                    ? new Date(parts[2], parts[0] - 1, parts[1]) // MM/DD/YYYY
+                    : new Date(post.date + "T00:00:00");          // YYYY-MM-DD fallback
+
+                return dateObj.toLocaleDateString('en-US', {
+                    year: 'numeric',
+                    month: 'long',
+                    day: 'numeric',
+                });
+                })()}
             </time>
-          )}
+            )}
         </header>
 
         <div className="article-body">
