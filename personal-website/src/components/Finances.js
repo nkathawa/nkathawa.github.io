@@ -1,13 +1,12 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Wallet, BarChart3, Target, CreditCard } from "lucide-react";
-import { BookOpen, PenLine, Lightbulb, Wrench } from "lucide-react";
+import { BookOpen, Lightbulb, Wrench } from "lucide-react";
 import { Link } from 'react-router-dom';
 import './Finances.css';
 
 const Finances = () => {
   const [activeSection, setActiveSection] = useState('intro');
-  const navigate = useNavigate();
 
   const [currentAge, setCurrentAge] = React.useState('');
   const [retirementAge, setRetirementAge] = React.useState('');
@@ -34,17 +33,6 @@ const Finances = () => {
 
     setMonthlyRetirementIncome(monthlyIncome);
   };
-
-  const articles = [
-    {
-      id: 'budgeting101',
-      title: 'Budgeting 101: The Foundation of Financial Success',
-      date: 'April 12, 2024',
-      excerpt: 'I firmly believe that a budget is the foundation of good finances. Learn how to create a budget that works for you and your lifestyle.',
-      readTime: '5 min read',
-      category: 'Budgeting'
-    },
-  ];
 
   const financialTips = [
     {
