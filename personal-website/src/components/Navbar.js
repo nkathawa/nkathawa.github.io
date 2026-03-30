@@ -32,7 +32,7 @@ const Navbar = () => {
           }}
         >
           <h1>Navin Kathawa</h1>
-          <span className="brand-subtitle">Software Developer & Personal Finance Enthusiast</span>
+          <span className="brand-subtitle">Software Engineer</span>
         </div>
 
         <button
