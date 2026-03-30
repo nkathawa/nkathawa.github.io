@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import './Contact.css';
 
 const Contact = () => {
@@ -9,8 +9,51 @@ const Contact = () => {
     message: ''
   });
 
+  const [captchaAnswer, setCaptchaAnswer] = useState('');
+  const [captchaChallenge, setCaptchaChallenge] = useState({ num1: 0, num2: 0, operator: '+' });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState(null);
+
+  const generateCaptcha = useCallback(() => {
+    const operators = ['+', '-', '×'];
+    const operator = operators[Math.floor(Math.random() * operators.length)];
+    let num1, num2;
+
+    switch (operator) {
+      case '+':
+        num1 = Math.floor(Math.random() * 20) + 1;
+        num2 = Math.floor(Math.random() * 20) + 1;
+        break;
+      case '-':
+        num1 = Math.floor(Math.random() * 20) + 5;
+        num2 = Math.floor(Math.random() * num1); // ensure non-negative result
+        break;
+      case '×':
+        num1 = Math.floor(Math.random() * 10) + 1;
+        num2 = Math.floor(Math.random() * 10) + 1;
+        break;
+      default:
+        num1 = Math.floor(Math.random() * 20) + 1;
+        num2 = Math.floor(Math.random() * 20) + 1;
+    }
+
+    setCaptchaChallenge({ num1, num2, operator });
+    setCaptchaAnswer('');
+  }, []);
+
+  useEffect(() => {
+    generateCaptcha();
+  }, [generateCaptcha]);
+
+  const getCorrectAnswer = () => {
+    const { num1, num2, operator } = captchaChallenge;
+    switch (operator) {
+      case '+': return num1 + num2;
+      case '-': return num1 - num2;
+      case '×': return num1 * num2;
+      default: return num1 + num2;
+    }
+  };
 
   const handleChange = (e) => {
     setFormData({
@@ -21,9 +64,18 @@ const Contact = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setIsSubmitting(true);
     setSubmitStatus(null);
-    
+
+    // Validate CAPTCHA
+    if (parseInt(captchaAnswer, 10) !== getCorrectAnswer()) {
+      setSubmitStatus('captcha-error');
+      generateCaptcha();
+      setTimeout(() => setSubmitStatus(null), 5000);
+      return;
+    }
+
+    setIsSubmitting(true);
+
     try {
       const response = await fetch('https://formspree.io/f/mnnzadjk', {
         method: 'POST',
@@ -36,6 +88,7 @@ const Contact = () => {
       if (response.ok) {
         setSubmitStatus('success');
         setFormData({ name: '', email: '', subject: '', message: '' });
+        generateCaptcha();
       } else {
         setSubmitStatus('error');
       }
@@ -44,7 +97,6 @@ const Contact = () => {
       setSubmitStatus('error');
     } finally {
       setIsSubmitting(false);
-      // Reset status after 5 seconds
       setTimeout(() => setSubmitStatus(null), 5000);
     }
   };
@@ -114,8 +166,40 @@ const Contact = () => {
                 ></textarea>
               </div>
 
-              <button 
-                type="submit" 
+              {/* CAPTCHA */}
+              <div className="form-group captcha-group">
+                <label htmlFor="captcha">
+                  Verify you're human: What is{' '}
+                  <span className="captcha-question">
+                    {captchaChallenge.num1} {captchaChallenge.operator} {captchaChallenge.num2}
+                  </span>
+                  ? *
+                </label>
+                <div className="captcha-input-wrapper">
+                  <input
+                    type="number"
+                    id="captcha"
+                    name="captcha"
+                    value={captchaAnswer}
+                    onChange={(e) => setCaptchaAnswer(e.target.value)}
+                    placeholder="Your answer"
+                    required
+                    className="captcha-input"
+                  />
+                  <button
+                    type="button"
+                    className="captcha-refresh-btn"
+                    onClick={generateCaptcha}
+                    title="Generate a new question"
+                    aria-label="Generate a new CAPTCHA question"
+                  >
+                    ↻
+                  </button>
+                </div>
+              </div>
+
+              <button
+                type="submit"
                 className={`submit-btn ${isSubmitting ? 'submitting' : ''}`}
                 disabled={isSubmitting}
               >
@@ -133,6 +217,12 @@ const Contact = () => {
                   ❌ Sorry, there was an error sending your message. Please try again or contact me directly.
                 </div>
               )}
+
+              {submitStatus === 'captcha-error' && (
+                <div className="error-message">
+                  ❌ Incorrect CAPTCHA answer. Please try the new question above.
+                </div>
+              )}
             </form>
           </div>
         </div>
@@ -141,4 +231,4 @@ const Contact = () => {
   );
 };
 
-export default Contact; 
+export default Contact;
